@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumar</title>
+</head>
+<body>
+
+    <form>
+        <label>
+            Primer operando
+            <input type="number" id="op1">
+        </label>
+        <br><br>
+        <label>
+            Segundo operando
+            <input type="number" id="op2">
+        </label>
+        <br><br>
+
+
+        <button onclick="imprimirResultado()">Calcular</button>
+
+    </form>
+
+        <script>
+
+
+
+            function imprimirResultado(){
+
+                res = parseInt(document.getElementById('op1').value) + parseInt(document.getElementById('op2').value);
+
+
+                resultado = window.open("resultado.html");
+
+                resultado.document.write(`<h1> ${res} </h1>`);
+
+
+            }
+
+
+        </script>
+
+</body>
+</html>

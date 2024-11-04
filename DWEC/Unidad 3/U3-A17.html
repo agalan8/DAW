@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U3-A17</title>
+</head>
+<body>
+
+    <br>
+    <br>
+
+    <label>Introduce un texto con varias líneas:</label>
+
+    <br>
+    <br>
+
+    <textarea id="texto" style="width: 200px; height: 200px;"></textarea>
+
+    <button onclick="comprobar()">Enviar</button>
+
+    <div id="div1"></div>
+
+    <script>
+
+        function comprobar(){
+
+            texto = document.getElementById('texto').value;
+
+            /* Esta expresion regular comprueba si la primera palabra empieza por mayúscula o
+            si la palabra se encuentra detras de un ".", "?" o "!"*/
+            patt1 = new RegExp(/\b([A-Z][a-zA-Z]*)|(?<=[.!?])\s*([a-zA-Z]+)/g);
+
+            res = texto.match(patt1);
+
+            document.getElementById('div1').innerHTML = `<br> <h1> ${res} </h1>`;
+        }
+
+    </script>
+</body>
+</html>
