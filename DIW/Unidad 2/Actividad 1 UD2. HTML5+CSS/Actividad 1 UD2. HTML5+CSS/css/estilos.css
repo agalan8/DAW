@@ -1,0 +1,42 @@
+* {
+    margin : 0px
+}
+
+header{
+    padding-top: 0.5em;
+    background-color: black;
+    padding-left: 8em;
+}
+
+header>h1{
+
+    color: white;
+    margin-top: 0em;
+    padding-bottom: 0.7em;
+}
+
+header>img{
+
+    width: 10em;
+}
+
+nav{
+
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+    text-align: center;
+}
+
+.item{
+
+    display: inline;
+    margin-right: 2em;
+}
+
+.item:focus{
+
+
+    border-bottom: solid red;
+
+
+}
