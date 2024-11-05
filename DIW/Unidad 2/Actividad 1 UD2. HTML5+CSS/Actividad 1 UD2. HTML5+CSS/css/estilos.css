@@ -9,34 +9,35 @@ header{
 }
 
 header>h1{
-
     color: white;
     margin-top: 0em;
     padding-bottom: 0.7em;
 }
 
 header>img{
-
     width: 10em;
 }
 
 nav{
-
-    padding-top: 1.2em;
-    padding-bottom: 1.2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
     text-align: center;
+    box-shadow: 0 0 10px rgba(83, 83, 83, 0.5);
 }
 
 .item{
-
     display: inline;
     margin-right: 2em;
 }
 
-.item:focus{
+a{
+ text-decoration: none;
+ color: black;
+}
 
-
-    border-bottom: solid red;
-
-
+.active{
+    display: inline;
+    margin-right: 2em;
+    border-bottom: 3px solid red;
+    padding-bottom: 0.3em;
 }
