@@ -34,6 +34,7 @@ h2{
 
 figure{
     text-align: center;
+    margin-bottom: 1.5em;
 }
 
 ol{
@@ -80,7 +81,7 @@ dt{
 }
 
 .aMenu{
-    color: solid #2222;
+    color: #222222;
 }
 
 .aMenu:hover{
@@ -106,11 +107,21 @@ dt{
 .div1 {
     margin-top: 1.8em;
     margin-left: 4em;
+    margin-right: 4em;
     margin-bottom: 0.5em;
+    text-align: justify;
 }
 
-.div1>h1{
-    margin-bottom: 0.3em;
+.div1>h2{
+    font-size: 2.5em;
+    margin-bottom: 0em;
+}
+
+.div1>h3{
+
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 1.8em;
 }
 
 .a{
@@ -153,15 +164,7 @@ figure>iframe{
     height: 22.5em;
 }
 
-.articleJustify{
-    text-align: justify;
-    margin-top: 2em;
-    margin-bottom: 1.5em;
-    margin-left: 4em;
-    margin-right: 4em;
-}
-
-article>p{
+.div1>p{
     margin-top: 0.8em;
     margin-bottom: 1em;
     line-height: 1.5em;
@@ -182,6 +185,7 @@ article>p{
     margin-left: 10em;
     margin-right: 5em;
     font-size: 0.8em;
+    text-align: center;
 }
 
 .imgRedonda{
@@ -212,11 +216,16 @@ ol>li{
     list-style-type:square;
 }
 
+.liSinNumero{
+    list-style-type: none;
+}
+
 .liItalica{
     font-size: 0.9em;
     margin-top: 1em;
     list-style-type:square;
     font-style: italic;
+    list-style-type: square;
 }
 
 .liPrensa{
