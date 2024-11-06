@@ -33,12 +33,6 @@ header a{
     font-size: 1.2em;
 }
 
-footer{
-    background-color: #D0D0D0;
-    border-top: 4px solid #73EDFF;
-    text-align: center;
-
-}
 
 .ulMenu{
     list-style-type: none;
@@ -100,6 +94,12 @@ footer{
     list-style-type: none;
 }
 
+footer{
+    background-color: #D0D0D0;
+    border-top: 4px solid #73EDFF;
+    text-align: center;
+
+}
 
 
 

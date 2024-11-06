@@ -6,8 +6,16 @@
     <title>Resultado</title>
 </head>
 <body>
-
-    <h1>eeee</h1>
-
+    <script>
+        /* location es un objeto que representa la URL de la página actual y search accede
+        a la cadena de consulta de la URL, es decir, a partir del ? de la URL */
+        res = window.location.search;
+        // Convierte la cadena de parámetros en un objeto
+        res = new URLSearchParams(res);
+        // Obtengo el valor del parámetro "res" del objeto anterior
+        res = res.get("res");
+        // Imprimo el valor de res
+        document.write(`<h1>El resultado es: ${res}</h1>`);
+    </script>
 </body>
 </html>

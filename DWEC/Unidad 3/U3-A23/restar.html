@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sumar</title>
+    <title>Restar</title>
 </head>
 <body>
     <form>
@@ -21,7 +21,7 @@
     </form>
         <script>
             function imprimirResultado(){
-                res = parseInt(document.getElementById('op1').value) + parseInt(document.getElementById('op2').value);
+                res = parseInt(document.getElementById('op1').value) - parseInt(document.getElementById('op2').value);
                 resultado = window.open(`resultado.html?res=${res}`, "Resultado");
             }
         </script>
