@@ -1,0 +1,117 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+h1, h2 {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+p, h1, h2, a, i, ul{
+    color: #000078;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 20em 6em 20em;
+}
+
+header img{
+    width: 8em;
+}
+
+header nav{
+    text-align: right;
+}
+
+header a{
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+footer{
+    background-color: #D0D0D0;
+    border-top: 4px solid #73EDFF;
+    text-align: center;
+
+}
+
+.ulMenu{
+    list-style-type: none;
+}
+
+.ulMenu li{
+    display: inline;
+    padding-right: 1.5em;
+}
+
+.active{
+    border-bottom: 2px solid #FFE000;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8em;
+}
+
+.contenidoIzquierda{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    padding-left: 20em;
+}
+
+.contenidoIzquierda h1{
+    font-size: 4em;
+}
+
+.contenidoIzquierda p{
+    font-size: 1.85em;
+}
+
+.contenidoIzquierda button{
+    padding: 1em 2em 1em 2em;
+    background-color: #FFE000;
+    border: 0;
+    border-radius: 5px;
+}
+
+.contenidoDerecha{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    padding-right: 20em;
+}
+
+.contenidoDerecha iframe{
+    width: 40em;
+    height: 22.5em;
+}
+
+.div3 ul{
+    list-style-type: none;
+}
+
+
+
+
+
+.lato-regular400 {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lato-regular700 {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
