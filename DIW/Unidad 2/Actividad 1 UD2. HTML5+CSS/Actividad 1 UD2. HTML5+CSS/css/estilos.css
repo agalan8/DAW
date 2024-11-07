@@ -2,6 +2,15 @@
     margin : 0px
 }
 
+main{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.justify{
+    text-align: justify;
+}
+
 body{
     background-color: #EEEEEE;
 }
@@ -38,17 +47,17 @@ figure{
 }
 
 ol{
-    margin-left: 2.5em;
     margin-bottom: 3em;
 }
 
 header{
     padding-top: 0.5em;
-    padding-left: 4em;
     background-color: #000000;
 }
 
 header>h1{
+    margin-left: 20%;
+    margin-right: 20%;
     font-size: 3em;
     color: #FFFFFF;
     margin-top: 0em;
@@ -57,6 +66,8 @@ header>h1{
 }
 
 header>img{
+    margin-left: 20%;
+    margin-right: 20%;
     width: 10.5em;
 }
 
@@ -70,8 +81,6 @@ nav{
 dl{
     margin-top: 2em;
     margin-bottom: 1.5em;
-    margin-left: 4em;
-    margin-right: 4em;
 }
 
 dt{
@@ -105,11 +114,9 @@ dt{
 }
 
 .div1 {
+
     margin-top: 1.8em;
-    margin-left: 4em;
-    margin-right: 4em;
     margin-bottom: 0.5em;
-    text-align: justify;
 }
 
 .div1>h2{
@@ -129,13 +136,13 @@ dt{
 }
 
 .a:hover{
-    color: #2222;
+    color: #222222;
 }
 
 .parrafoBorde{
     border-top: 0.2em solid #DDDDDD;
     border-bottom: 0.2em solid #DDDDDD;
-    margin: 0.8em 6.5em 1.5em 6.5em;
+    margin: 0.8em 0em 1.5em 0em;
     padding: 1em 0.8em 1em 0.8em;
     line-height: 1.5em;
     text-align: justify;
@@ -149,9 +156,9 @@ dt{
     width: 25em;
 }
 
-
 figure>img{
-    width: 40em;
+    width: 80%;
+    height: auto;
 }
 
 figure>figcaption{
@@ -160,8 +167,9 @@ figure>figcaption{
 
 figure>iframe{
     margin-top: 1em;
-    width: 40em;
-    height: 22.5em;
+    width: 80%;
+    height: 26.5vw;
+
 }
 
 .div1>p{
@@ -182,10 +190,9 @@ figure>iframe{
     font-style: italic;
     margin-top: 5em;
     margin-bottom: 4.8em;
-    margin-left: 10em;
-    margin-right: 5em;
+    margin-right: 10%;
+    margin-left: 10%;
     font-size: 0.8em;
-    text-align: center;
 }
 
 .imgRedonda{
@@ -197,11 +204,14 @@ figure>iframe{
 .div2{
     display: flex;
     align-items: center;
-    margin-left: 6em;
+    margin-left: 10%;
+    margin-right: 10%;
+
 }
 
 .div2>p{
     margin-top: 4em;
+
     line-height: 1.5em;
 }
 
