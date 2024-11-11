@@ -17,7 +17,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 20em 6em 20em;
+    margin: 1em 20% 6em 20%;
 }
 
 header img{
@@ -40,55 +40,71 @@ header a{
 
 .ulMenu li{
     display: inline;
-    padding-right: 1.5em;
+    padding-left: 1.5em;
 }
 
 .active{
     border-bottom: 2px solid #FFE000;
 }
 
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8em;
+.seccion1{
+    margin-left: 20%;
+    margin-right: 20%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 3em;
 }
 
-.contenidoIzquierda{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1em;
-    padding-left: 20em;
+.contDerS1{
+    position: relative;
+    padding-top: 56.26%;
+
 }
 
-.contenidoIzquierda h1{
-    font-size: 4em;
+.contDerS1 iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.contenidoIzquierda p{
-    font-size: 1.85em;
+.contIzqS1{
+    position: relative;
 }
 
-.contenidoIzquierda button{
+.contIzqS1 h1{
+    padding-right: 10%;
+    font-size: 3.9em;
+}
+
+.contIzqS1 p{
+    margin-top: 0.8em;
+    padding-right: 18%;
+    font-size: 1.7em;
+}
+
+.contIzqS1 button{
+    font-size: 1em;
+    margin-top: 1.5em;
     padding: 1em 2em 1em 2em;
     background-color: #FFE000;
     border: 0;
     border-radius: 5px;
 }
 
-.contenidoDerecha{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1em;
-    padding-right: 20em;
+.seccion2{
+    background-color: #D0D0D0;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
-.contenidoDerecha iframe{
-    width: 40em;
-    height: 22.5em;
+.iconos{
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
+
+
 
 .div3 ul{
     list-style-type: none;
@@ -100,9 +116,6 @@ footer{
     text-align: center;
 
 }
-
-
-
 
 .lato-regular400 {
     font-family: "Lato", sans-serif;
