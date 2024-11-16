@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Publicar</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="img/Logo_blau_uoc.png" alt="logo">
+        </a>
+        <nav class="lato-regular700">
+            <ul class="ulMenu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="http://openaccess.uoc.edu/webapps/o2/?locale=es">Buscar</a></li>
+                <li><a class="active" href="publicar.html">Publicar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="titulo">O2: depositar un documento</h1>
+
+    <form action="#" method="post">
+
+        <h2>Datos de la publicación</h2>
+        <label>Comunidad donde debe publicarse:
+            <select name="comunidad" required>
+                <option value="" selected disabled>Comunidad...</option>
+                <option value="docencia">Docencia</option>
+                <option value="institucional">Institucional</option>
+                <option value="investigacion">Investigación</option>
+                <option value="datos">Datos</option>
+            </select>
+        </label>
+        <br>
+        <label>Nombre del autor:
+            <input type="text" name="nombreAutor" pattern="[A-Za-zÀ-ÿÁáÉéÍíÓóÚúÑñ' -]{2,64}" title="El nombre debe contener solo letras, apóstrofes, guiones, y debe tener entre 2 y 64 caracteres." required>
+        </label>
+        <br>
+        <label>Primer apellido del autor:
+            <input type="text" name="primeApellidoAutor" pattern="[A-Za-zÀ-ÿÁáÉéÍíÓóÚúÑñ' -]{2,64}" title="El nombre debe contener solo letras, apóstrofes, guiones, y debe tener entre 2 y 64 caracteres." required>
+        </label>
+        <label>Segundo apellido del autor:
+            <input type="text" name="segundoApellidoAutor" pattern="[A-Za-zÀ-ÿÁáÉéÍíÓóÚúÑñ' -]{2,64}" title="El nombre debe contener solo letras, apóstrofes, guiones, y debe tener entre 2 y 64 caracteres." required>
+        </label>
+        <br>
+        <label>Título del documento:
+            <input type="text" name="tituloDocumento" required>
+        </label>
+        <label>Fecha de creación del documento:
+            <input type="text" name="fechaCreacionDocumento" required>
+        </label>
+        <br>
+        <label>Editorial:
+            <input type="text" name="editorial" value="Universitat Oberta de Catalunya" readonly>
+        </label>
+        <br>
+        <label>Tipo de documento:
+            <select name="tipoDocumento" required>
+                <option value="" selected disabled>Tipo de documento...</option>
+                <option value="articulo">Articulo</option>
+                <option value="trabajoFinCarrera">Trabajo fin de carrera</option>
+                <option value="trabajoFinMaster">Trabajo fin de máster</option>
+                <option value="tesisDoctoral">Tesis doctoral</option>
+                <option value="libro">Libro</option>
+                <option value="parteLibro">Capítulo o parte de libro</option>
+                <option value="revision">Revisión</option>
+                <option value="conferencia">Conferencia</option>
+                <option value="clase">Clase</option>
+                <option value="informeInvestigacion">Informe de investigación</option>
+                <option value="informeInterno">Informe interno</option>
+                <option value="hojaInformativa">Hoja informativa</option>
+                <option value="documental">Documental</option>
+            </select>
+        </label>
+        <label>Idioma del documento:
+            <select name="idiomaDocumento" required>
+                <option value="" selected disabled>Idioma del documento...</option>
+                <option value="castellano">Castellano</option>
+                <option value="catalan">Catalán</option>
+                <option value="ingles">Inglés</option>
+                <option value="aleman">Alemán</option>
+                <option value="frances">Francés</option>
+                <option value="italiano">Italiano</option>
+                <option value="japones">Japonés</option>
+                <option value="chino">Chino</option>
+                <option value="otro">Otro</option>
+            </select>
+        </label>
+        <br>
+        <label>Breve resumen del documento:
+            <textarea name="resumenDocumento" required></textarea>
+        </label>
+        <br>
+        <label>Enviar documento
+            <input type="file" name="enviarDocumento" required>
+        </label>
+        <br>
+        <label>Acepta la licencia de publicación del documento:
+            <select name="licencia" required>
+                <option value="" selected disabled>Licencia...</option>
+                <option value="licencia1">Reconocimiento - NoComercial-SinObraDerivada 3.0</option>
+                <option value="licencia2">Reconocimiento - NoComercial-CompartirIgual 3.0</option>
+                <option value="licencia3">Reconocimiento - SinObraDerivada 3.0</option>
+                <option value="licencia4">Reconocimiento - CompartirIgual 3.0</option>
+                <option value="licencia5">Reconocimiento 3.0</option>
+            </select>
+        </label>
+        <h2>Datos de contacto del remitente</h2>
+        <label>Nombre y apellidos:
+            <input type="text" name="nombreApellidos" pattern="[A-Za-zÀ-ÿÁáÉéÍíÓóÚúÑñ' -]{2,128}" title="El nombre debe contener solo letras, apóstrofes, guiones, y debe tener entre 2 y 128 caracteres." required>
+        </label>
+        <fieldset>
+            <legend>Por favor, seleccione una de las dos opciones siguientes:</legend> <br>
+            <label>
+                <input type="radio" name="sexo" value="hombre" required> Hombre
+            </label>
+            <label>
+                <input type="radio" name="sexo" value="mujer" required> Mujer
+            </label>
+        </fieldset>
+        <label>Tipo de documento de identidad:
+            <select name="docIdentidad" required>
+                <option value="" selected disabled>Tipo de documento...</option>
+                <option value="nif">NIF</option>
+                <option value="nie">NIE</option>
+                <option value="pass">PASS</option>
+            </select>
+        </label>
+        <label>Número de documento:
+            <input type="text" name="numDocumento" required>
+        </label>
+        <br>
+        <label>Correo electrónico:
+            <input type="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+            title="El correo electrónico debe tener un formato válido, por ejemplo: ejemplo@dominio.com" required>
+        </label>
+        <label>Teléfono (opcional):
+            <input type="tel" name="telefono">
+        </label>
+        <br>
+        <label>Idioma para la respuesta:
+            <select name="idiomaRes" required>
+                <option value="" selected disabled>Idioma...</option>
+                <option value="castellano">Castellano</option>
+                <option value="catalan">Catalán</option>
+            </select>
+        </label>
+        <h2>Datos adicionales</h2>
+        <label>
+            <input type="checkbox" name="aceptaPolitica" required>
+            He leído y acepto la política de privacidad y el aviso legal
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="informado" required>
+            Deseo ser informado sobre las nuevas incorporaciones al repositorio
+        </label>
+        <br>
+        <button type="submit">Enviar</button>
+
+
+
+
+    </form>
+
+    <footer>
+        <div class="lato-regular400">
+            <p>Actividad realizada por Alejandro Galán Caballero, para el módulo DIW</p>
+            <p>Primer trimestre curso 2024-2025</p>
+        </div>
+    </footer>
+
+</body>
+</html>

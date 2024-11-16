@@ -9,15 +9,20 @@ h1, h2 {
     font-style: normal;
 }
 
-p, h1, h2, a, i, ul{
+p, h1, h2, a, i, ul, label{
     color: #000078;
+}
+
+form{
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1em 20% 6em 20%;
+    margin: 1em 20% 0em 20%;
 }
 
 header img{
@@ -50,6 +55,7 @@ header a{
 .seccion1{
     margin-left: 20%;
     margin-right: 20%;
+    margin-top: 6em;
     display: grid;
     grid-template-columns: 50% 50%;
     margin-bottom: 3em;
@@ -81,7 +87,7 @@ header a{
 .contIzqS1 p{
     margin-top: 0.8em;
     padding-right: 18%;
-    font-size: 1.7em;
+    font-size: 1.66em;
 }
 
 .contIzqS1 button{
@@ -91,30 +97,152 @@ header a{
     background-color: #FFE000;
     border: 0;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .seccion2{
     background-color: #D0D0D0;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 40% 20% 40%;
+    grid-template-rows: 125px 185px;
+    grid-template-areas: "titulo titulo titulo"
+                         "icono1 icono2 icono3";
 }
 
-.iconos{
-    display: inline-grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.seccion2 div{
+    text-align: center;
 }
 
+.seccion2 h2{
+    font-size: 1.8em;
+}
 
+.seccion2 i{
+    font-size: 65px;
+}
 
-.div3 ul{
+.seccion2 p{
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+}
+
+.tituloS2{
+    grid-area: titulo;
+    margin-top: 3em;
+}
+
+.icono1S2{
+    grid-area: icono1;
+    margin-left: 20em;
+}
+
+.icono2S2{
+    grid-area: icono2;
+}
+
+.icono3S2{
+    grid-area: icono3;
+    margin-right: 20em;
+}
+
+.numeros{
+    font-size: 1.5em;
+}
+
+.seccion3{
+    padding-left: 32em;
+    padding-right: 32em;
+}
+
+.seccion3 h2{
+    margin-top: 1.8em;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.seccion3 ul{
+    margin-top: 2.5em;
+    margin-bottom: 7em;
     list-style-type: none;
 }
+
+.seccion3 li{
+    font-size: 1.3em;
+    border-right: 1px solid #D0D0D0;
+    border-bottom: 1px solid #D0D0D0;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    margin-bottom: 1.4em;
+}
+
+.titulo{
+    margin: 0.8em 20% 0.8em 20%;
+    font-size: 4em;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 315px 220px 130px 200px 90px 185px;
+    grid-template-rows:  70px repeat(6, 1fr);
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-bottom: 5.5em;
+}
+
+.item{
+    text-align: center;
+    border-top: 2px solid #000078;
+    padding: 1em 1em 1em 1em;
+    padding-bottom: 1em;
+}
+
+.item p{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.item p, .item a {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.item1{
+    background-color: #D0D0D0;
+}
+
+.item2{
+    background-color: #F0F0F0;
+}
+
+.pieGrid{
+    grid-column: 1 / -1;
+    border-top: 2px solid #000078;
+    border-bottom: 1px solid #000078;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+form label{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 
 footer{
     background-color: #D0D0D0;
     border-top: 4px solid #73EDFF;
     text-align: center;
+    padding-bottom: 5em;
+}
 
+footer p{
+    margin-top: 1em;
+    font-size: 1.3em;
 }
 
 .lato-regular400 {
