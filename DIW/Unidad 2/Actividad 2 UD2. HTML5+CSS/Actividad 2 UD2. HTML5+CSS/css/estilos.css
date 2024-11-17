@@ -13,11 +13,6 @@ p, h1, h2, a, i, ul, label{
     color: #000078;
 }
 
-form{
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
 header{
     display: flex;
     justify-content: space-between;
@@ -37,7 +32,6 @@ header a{
     text-decoration: none;
     font-size: 1.2em;
 }
-
 
 .ulMenu{
     list-style-type: none;
@@ -226,12 +220,221 @@ header a{
     font-size: 0.9em;
 }
 
-form label{
+.formulario{
+    display: grid;
+    border: 2px solid #000078;
+    border-radius: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 5.5em;
+    grid-template-columns: 50% 50%;
+    grid-template-rows:  repeat(20, auto);
+    grid-template-areas: "h2Form1 h2Form1"
+                         "comunidad comunidad"
+                         "nombreAutor nombreAutor"
+                         "primerApellido segundoApellido"
+                         "tituloDocumento fechaCreacion"
+                         "editorial editorial"
+                         "tipoDocumento idiomaDocumento"
+                         "resumenDocumento resumenDocumento"
+                         "enviarDocumento enviarDocumento"
+                         "licencia licencia"
+                         "h2Form2 h2Form2"
+                         "nombreApellidos nombreApellidos"
+                         "sexo sexo"
+                         "tipoIdentidad numDocumento"
+                         "email tlf"
+                         "idiomaRes idiomaRes"
+                         "h2Form3 h2Form3"
+                         "politica politica"
+                         "informado informado"
+                         "enviar enviar";
+
+}
+
+.formulario label{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #000078;
+    margin-left: 5em;
+    margin-top: 2em;
+}
+
+.formulario input[type="text"] {
+    margin-top: 0.8em;
+    width: 300px;
+    height: 15px;
+    border-radius: 0;
+    border: 2px solid #000078;
+    padding: 10px;
+}
+
+.formulario input[type="tel"] {
+    margin-top: 0.8em;
+    width: 300px;
+    height: 15px;
+    border-radius: 0;
+    border: 2px solid #000078;
+    padding: 10px;
+}
+
+.formulario input[type="file"] {
+    margin-top: 2em;
+}
+
+.formulario input[type="email"] {
+    margin-top: 0.8em;
+    width: 300px;
+    height: 15px;
+    border-radius: 0;
+    border: 2px solid #000078;
+    padding: 10px;
+}
+
+.formulario h2{
+    margin-left: 2em;
+    margin-top: 1.5em;
+}
+
+.formulario select{
+    margin-top: 0.8em;
+    width: 300px;
+    height: 40px;
+    border: 2px solid #000078;
+}
+
+.formulario fieldset{
+    margin-top: 1em;
+    margin-left: 5em;
+    margin-right: 40em;
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
+.formulario textarea{
+    margin-top: 0.8em;
+    resize: none;
+    border: 2px solid #000078;
+    width: 890px;
+    height: 150px;
+    padding: 10px;
+}
+
+.formulario button{
+    margin-top: 2em;
+    margin-bottom: 1em;
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+    color: #000078;
+    background-color: #FFE000;
+    border: 0px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.h2Form1{
+    grid-area: h2Form1;
+}
+
+.labelComunidad{
+    grid-area: comunidad;
+}
+
+.labelNombreAutor{
+    grid-area: nombreAutor;
+}
+
+.labelPrimerApellido{
+    grid-area: primerApellido;
+}
+
+.labelSegundoApellido{
+    grid-area: segundoApellido;
+}
+
+.labelTituloDocumento{
+    grid-area: tituloDocumento;
+}
+
+.labelFechaCreacion{
+    grid-area: fechaCreacion;
+}
+
+.labelEditorial{
+    grid-area: editorial;
+}
+
+.labelTipoDocumento{
+    grid-area: tipoDocumento;
+}
+
+.labelIdiomaDocumento{
+    grid-area: idiomaDocumento;
+}
+
+.labelResumenDocumento{
+    grid-area: resumenDocumento;
+}
+
+.labelEnviarDocumento{
+    grid-area: enviarDocumento;
+}
+
+.labelLicencia{
+    grid-area: licencia;
+}
+
+.h2Form2{
+    grid-area: h2Form2;
+}
+
+.labelNombreApellidos{
+    grid-area: nombreApellidos;
+}
+
+.labelSexo{
+    grid-area: sexo;
+}
+
+.labelTipoIdentidad{
+    grid-area: tipoIdentidad;
+}
+
+.labelNumDocumento{
+    grid-area: numDocumento;
+}
+
+.labelEmail{
+    grid-area: email;
+}
+
+.labelTlf{
+    grid-area: tlf;
+}
+
+.labelIdiomaRes{
+    grid-area: idiomaRes;
+}
+
+.h2Form3{
+    grid-area: h2Form3;
+}
+
+.labelPolitica{
+    grid-area: politica;
+}
+
+.labelInformado{
+    grid-area: informado;
+}
+
+.buttonEnviar{
+    grid-area: enviar;
+    text-align: center;
+}
 
 footer{
     background-color: #D0D0D0;

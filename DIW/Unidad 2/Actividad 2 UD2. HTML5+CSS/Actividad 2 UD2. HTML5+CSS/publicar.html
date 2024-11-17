@@ -24,11 +24,9 @@
         </nav>
     </header>
     <h1 class="titulo">O2: depositar un documento</h1>
-
-    <form action="#" method="post">
-
-        <h2>Datos de la publicación</h2>
-        <label>Comunidad donde debe publicarse:
+    <form class="formulario" action="#" method="post">
+        <h2 class="h2Form1">Datos de la publicación</h2>
+        <label class="comunidad">Comunidad donde debe publicarse <br>
             <select name="comunidad" required>
                 <option value="" selected disabled>Comunidad...</option>
                 <option value="docencia">Docencia</option>
@@ -37,30 +35,25 @@
                 <option value="datos">Datos</option>
             </select>
         </label>
-        <br>
-        <label>Nombre del autor:
+        <label class="labelNombreAutor">Nombre del autor <br>
             <input type="text" name="nombreAutor" pattern="[A-Za-zÀ-ÿÁáÉéÍíÓóÚúÑñ' -]{2,64}" title="El nombre debe contener solo letras, apóstrofes, guiones, y debe tener entre 2 y 64 caracteres." required>
         </label>
-        <br>
-        <label>Primer apellido del autor:
+        <label class="labelPrimerApellido">Primer apellido del autor <br>
             <input type="text" name="primeApellidoAutor" pattern="[A-Za-zÀ-ÿÁáÉéÍíÓóÚúÑñ' -]{2,64}" title="El nombre debe contener solo letras, apóstrofes, guiones, y debe tener entre 2 y 64 caracteres." required>
         </label>
-        <label>Segundo apellido del autor:
+        <label class="labelSegundoApellido">Segundo apellido del autor <br>
             <input type="text" name="segundoApellidoAutor" pattern="[A-Za-zÀ-ÿÁáÉéÍíÓóÚúÑñ' -]{2,64}" title="El nombre debe contener solo letras, apóstrofes, guiones, y debe tener entre 2 y 64 caracteres." required>
         </label>
-        <br>
-        <label>Título del documento:
+        <label class="labelTituloDocumento">Título del documento <br>
             <input type="text" name="tituloDocumento" required>
         </label>
-        <label>Fecha de creación del documento:
+        <label class="labelFechaCreacion">Fecha de creación del documento <br>
             <input type="text" name="fechaCreacionDocumento" required>
         </label>
-        <br>
-        <label>Editorial:
+        <label class="labelEditorial">Editorial <br>
             <input type="text" name="editorial" value="Universitat Oberta de Catalunya" readonly>
         </label>
-        <br>
-        <label>Tipo de documento:
+        <label class="labelTipoDocumento">Tipo de documento <br>
             <select name="tipoDocumento" required>
                 <option value="" selected disabled>Tipo de documento...</option>
                 <option value="articulo">Articulo</option>
@@ -78,7 +71,7 @@
                 <option value="documental">Documental</option>
             </select>
         </label>
-        <label>Idioma del documento:
+        <label class="labelIdiomaDocumento">Idioma del documento <br>
             <select name="idiomaDocumento" required>
                 <option value="" selected disabled>Idioma del documento...</option>
                 <option value="castellano">Castellano</option>
@@ -92,16 +85,14 @@
                 <option value="otro">Otro</option>
             </select>
         </label>
-        <br>
-        <label>Breve resumen del documento:
+        <label class="labelResumenDocumento">Breve resumen del documento <br>
             <textarea name="resumenDocumento" required></textarea>
         </label>
-        <br>
-        <label>Enviar documento
+        <div class="labelEnviarDocumento">
+            <label for="enviarDocumento">Enviar documento</label>
             <input type="file" name="enviarDocumento" required>
-        </label>
-        <br>
-        <label>Acepta la licencia de publicación del documento:
+        </div>
+        <label class="labelLicencia">Acepta la licencia de publicación del documento <br>
             <select name="licencia" required>
                 <option value="" selected disabled>Licencia...</option>
                 <option value="licencia1">Reconocimiento - NoComercial-SinObraDerivada 3.0</option>
@@ -111,11 +102,11 @@
                 <option value="licencia5">Reconocimiento 3.0</option>
             </select>
         </label>
-        <h2>Datos de contacto del remitente</h2>
-        <label>Nombre y apellidos:
+        <h2 class="h2Form2">Datos de contacto del remitente</h2>
+        <label class="labelNombreApellidos">Nombre y apellidos <br>
             <input type="text" name="nombreApellidos" pattern="[A-Za-zÀ-ÿÁáÉéÍíÓóÚúÑñ' -]{2,128}" title="El nombre debe contener solo letras, apóstrofes, guiones, y debe tener entre 2 y 128 caracteres." required>
         </label>
-        <fieldset>
+        <fieldset class="labelSexo">
             <legend>Por favor, seleccione una de las dos opciones siguientes:</legend> <br>
             <label>
                 <input type="radio" name="sexo" value="hombre" required> Hombre
@@ -124,7 +115,7 @@
                 <input type="radio" name="sexo" value="mujer" required> Mujer
             </label>
         </fieldset>
-        <label>Tipo de documento de identidad:
+        <label class="labelTipoIdentidad">Tipo de documento de identidad <br>
             <select name="docIdentidad" required>
                 <option value="" selected disabled>Tipo de documento...</option>
                 <option value="nif">NIF</option>
@@ -132,49 +123,41 @@
                 <option value="pass">PASS</option>
             </select>
         </label>
-        <label>Número de documento:
+        <label class="labelNumDocumento">Número de documento <br>
             <input type="text" name="numDocumento" required>
         </label>
-        <br>
-        <label>Correo electrónico:
+        <label class="labelEmail">Correo electrónico <br>
             <input type="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
             title="El correo electrónico debe tener un formato válido, por ejemplo: ejemplo@dominio.com" required>
         </label>
-        <label>Teléfono (opcional):
+        <label class="labelTlf">Teléfono (opcional) <br>
             <input type="tel" name="telefono">
         </label>
-        <br>
-        <label>Idioma para la respuesta:
+        <label class="labelIdiomaRes">Idioma para la respuesta <br>
             <select name="idiomaRes" required>
                 <option value="" selected disabled>Idioma...</option>
                 <option value="castellano">Castellano</option>
                 <option value="catalan">Catalán</option>
             </select>
         </label>
-        <h2>Datos adicionales</h2>
-        <label>
+        <h2 class="h2Form3">Datos adicionales</h2>
+        <label class="labelPolitica">
             <input type="checkbox" name="aceptaPolitica" required>
             He leído y acepto la política de privacidad y el aviso legal
         </label>
-        <br>
-        <label>
+        <label class="labelInformado">
             <input type="checkbox" name="informado" required>
             Deseo ser informado sobre las nuevas incorporaciones al repositorio
         </label>
-        <br>
-        <button type="submit">Enviar</button>
-
-
-
-
+        <div class="buttonEnviar">
+            <button class="lato-regular700" type="submit">Enviar</button>
+        </div>
     </form>
-
     <footer>
         <div class="lato-regular400">
             <p>Actividad realizada por Alejandro Galán Caballero, para el módulo DIW</p>
             <p>Primer trimestre curso 2024-2025</p>
         </div>
     </footer>
-
 </body>
 </html>
