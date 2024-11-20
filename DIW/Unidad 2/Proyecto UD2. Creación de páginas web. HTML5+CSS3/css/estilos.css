@@ -12,8 +12,10 @@ a{
     text-decoration: none;
 }
 
+/* radial-gradient(rgb(106,63,140, 0) 0%, rgb(106,63,140, 0.1) 30%, rgb(36,10,52,0.6) 65%) */
+
 .bodyHome{
-    background-image: url(../img/fondo1.png), radial-gradient(rgb(106,63,140, 0) 0%, rgb(106,63,140, 0.1) 30%, rgb(36,10,52,0.6) 65%);
+    background-image: url(../img/fondo1.png), url(../img/fondo2.png) ;
     background-position: -320px center, center center;
     background-size: cover;
     background-repeat: no-repeat;
