@@ -1,0 +1,73 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.bodyHome{
+    background-image: url(../img/fondo1.png), radial-gradient(rgb(106,63,140, 0) 0%, rgb(106,63,140, 0.1) 30%, rgb(36,10,52,0.6) 65%);
+    background-position: -320px center, center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+}
+
+.logo{
+    border: 1px solid white;
+    display: inline-grid;
+    grid-template-columns: auto auto;
+
+}
+
+.logo img{
+    border: 1px solid white;
+    width: 65px;
+    height: 132px;
+}
+
+.logo a p{
+    text-align: start;
+}
+
+.logo p{
+    border: 1px solid white;
+    text-align: center;
+    font-size: 33px;
+    color: white;
+}
+
+.logo span{
+    font-size: 33px;
+    color: white;
+}
+
+
+
+.raleway-regular {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat-regular{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat-extraLight{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
