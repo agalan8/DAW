@@ -9,7 +9,38 @@ html, body{
 }
 
 a{
+    color: white;
     text-decoration: none;
+}
+
+nav{
+    display: inline-flex;
+    align-items: center;
+}
+
+nav ul li{
+    font-size: 30px;
+    display: inline;
+    margin-right: 85px;
+}
+
+.iniciar-sesion{
+    width: 265px;
+    height: 89px;
+    border-radius: 50px;
+    font-size: 30px;
+    border: none;
+}
+
+.comenzar{
+    width: 265px;
+    height: 89px;
+    margin-right: 82px;
+    margin-left: 53px;
+    border-radius: 50px;
+    font-size: 30px;
+    color: #6A3F8C;
+    border: none
 }
 
 /* radial-gradient(rgb(106,63,140, 0) 0%, rgb(106,63,140, 0.1) 30%, rgb(36,10,52,0.6) 65%) */
@@ -22,41 +53,70 @@ a{
     background-blend-mode: overlay;
 }
 
-.logo{
-    border: 1px solid white;
+.menu{
+    margin-top: 31px;
     display: inline-grid;
     grid-template-columns: auto auto;
 
 }
 
-.logo img{
-    border: 1px solid white;
+.menuLogo {
+    display: inline-flex;
+    align-items: center;
+}
+
+.menu img{
+    margin-left: 94px;
     width: 65px;
     height: 132px;
 }
 
-.logo a p{
-    text-align: start;
+.menu p{
+    margin-right: 130px;
+    text-align: left;
+    font-size: 33px;
+    color: white;
 }
 
-.logo p{
+.menu span{
+    font-size: 33px;
+    color: white;
+}
+
+.eslogan{
     border: 1px solid white;
+    display: grid;
+    text-shadow:
+    -1px -1px 0 #7EF0D4,  /* Sombra superior izquierda */
+    1px -1px 0 #7EF0D4,   /* Sombra superior derecha */
+    -1px 1px 0 #7EF0D4,   /* Sombra inferior izquierda */
+    1px 1px 0 #7EF0D4,
+    -2px -2px 0 #7EF0D4,  /* Sombra superior izquierda */
+    2px -2px 0 #7EF0D4,   /* Sombra superior derecha */
+    -2px 2px 0 #7EF0D4,   /* Sombra inferior izquierda */
+    2px 2px 0 #7EF0D4,    /* Sombra inferior derecha */
+    -3px -3px 0 #7EF0D4,  /* Sombra adicional para mayor grosor */
+    3px -3px 0 #7EF0D4,
+    -3px 3px 0 #7EF0D4,
+    3px 3px 0 #7EF0D4;
+    color:#6A3F8C;
+    font-size: 120px;
     text-align: center;
-    font-size: 33px;
-    color: white;
+    margin-left: 180px;
+
 }
-
-.logo span{
-    font-size: 33px;
-    color: white;
-}
-
-
 
 .raleway-regular {
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
+  font-style: normal;
+}
+
+.raleway-bold{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -71,5 +131,12 @@ a{
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 200;
+    font-style: normal;
+}
+
+.montserrat-bold{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
     font-style: normal;
   }
