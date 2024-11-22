@@ -9,6 +9,8 @@
 
         <p id="imprimirDatos"></p>
 
+        <button onclick="volver()">Regresar</button>
+
     </body>
     <script>
 
@@ -29,6 +31,10 @@
             } else if (mOrigen == "libra" && mDestino == "dolar"){
                 return parseInt(cantidad) / 1.5;
             }
+        }
+
+        function volver(){
+            location.replace('Principal.html');
         }
 
         datos = window.location.search;
