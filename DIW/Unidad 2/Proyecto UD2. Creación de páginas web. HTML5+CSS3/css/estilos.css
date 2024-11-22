@@ -8,6 +8,12 @@ html, body{
     margin: 0;
 }
 
+body{
+    display: grid;
+    align-items: center;
+    grid-template-rows: 200px 760px;
+}
+
 a{
     color: white;
     text-decoration: none;
@@ -84,8 +90,13 @@ nav ul li{
 }
 
 .eslogan{
+
+    justify-self: center;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    font-size: 70px;
     border: 1px solid white;
-    display: grid;
     text-shadow:
     -1px -1px 0 #7EF0D4,  /* Sombra superior izquierda */
     1px -1px 0 #7EF0D4,   /* Sombra superior derecha */
@@ -100,9 +111,9 @@ nav ul li{
     -3px 3px 0 #7EF0D4,
     3px 3px 0 #7EF0D4;
     color:#6A3F8C;
-    font-size: 120px;
     text-align: center;
     padding: 0;
+
 }
 
 .raleway-regular {
