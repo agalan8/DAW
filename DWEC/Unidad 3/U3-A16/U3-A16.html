@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U3-A16</title>
+</head>
+<body>
+
+    <br>
+    <br>
+
+    <label">Introduce un día de la semana y un número (lunes 31):
+        <input type="text" id="semana">
+    </label>
+
+    <button onclick="comprobar()">Enviar</button>
+
+    <div id="div1"></div>
+
+    <script>
+
+        function comprobar(){
+
+            semana = document.getElementById('semana').value;
+
+            /* Esta expresión regular tiene encuenta que para los días del mes en caso de que el primer dígito sea 3
+            el segundo dígito solo puede ser 0 o 1*/
+            patt1 = new RegExp(/^(lunes | martes | miércoles | jueves | viernes | sábado | domingo)(([0]?[1-9])|([1-2][0-9])|(3[01]))$/);
+
+            if(patt1.test(semana)){
+
+                document.getElementById('div1').innerHTML = (`<h1>El formato es correcto</h1>`);
+            } else {
+
+                document.getElementById('div1').innerHTML = (`<h1>El formato es incorrecto</h1>`);
+            }
+        }
+
+    </script>
+</body>
+</html>

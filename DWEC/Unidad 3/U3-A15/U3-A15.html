@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U3-A15</title>
+</head>
+<body>
+
+    <br>
+    <br>
+
+    <label">Introduce una matrícula (0000 AAA):
+        <input type="text" id="matricula">
+    </label>
+
+    <button onclick="comprobarMatricula()">Enviar</button>
+
+    <div id="div1"></div>
+
+    <script>
+
+        function comprobarMatricula(){
+
+            matricula = document.getElementById('matricula').value;
+            patt1 = new RegExp(/\d{4}\s[A-Z]{3}/);
+
+            if(patt1.test(matricula)){
+
+                document.getElementById('div1').innerHTML = (`<h1>El formato es correcto</h1>`);
+            } else {
+
+                document.getElementById('div1').innerHTML = (`<h1>El formato es incorrecto</h1>`);
+            }
+        }
+
+    </script>
+</body>
+</html>

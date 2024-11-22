@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U3-A08</title>
+</head>
+<body>
+    <h1>Área de un círculo</h1>
+    <label>Introduce el radio:
+        <input type="text" id="radio">
+    </label>
+    <br>
+    <br>
+    <div id="div1"></div>
+    <br>
+    <button onclick="areaCirculo()">Calcular</button>
+    <h1>Área de un triangulo</h1>
+    <label>Introduce la base:
+        <input type="text" id="base">
+    </label>
+    <br>
+    <label>Introduce la altura:
+        <input type="text" id="altura">
+    </label>
+    <br>
+    <br>
+    <div id="div2"></div>
+    <br>
+    <button onclick="areaTriangulo()">Calcular</button>
+
+    <script>
+
+        function areaCirculo(){
+           radio = document.getElementById('radio').value;
+           res = Math.PI * Math.pow(radio,2);
+           document.getElementById('div1').innerHTML = (`El área de un círculo es ${res} cm2`);
+        }
+
+        function areaTriangulo(){
+            base = document.getElementById('base').value;
+            altura = document.getElementById('altura').value;
+            res = (base * altura) / 2;
+            document.getElementById('div2').innerHTML = (`El área de un triangulo es ${res} cm2`);
+        }
+
+    </script>
+</body>
+</html>

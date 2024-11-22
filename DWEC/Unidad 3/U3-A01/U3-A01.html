@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U3-A01</title>
+</head>
+<body>
+
+    <script>
+
+        fechaActual = new Date();
+
+        fechaFinAno = new Date(2024, 12, 31);
+
+        fechaRes = fechaFinAno - fechaActual;
+
+        dias = fechaRes/(1000*60*60*24);
+
+        document.write(`<h1>Desde la fecha actual hasta fin de año quedan ${Math.trunc(dias)} dias.</h1>`);
+
+        document.write(`<h1>Desde la fecha actual hasta fin de año quedan ${fechaRes} milisegundos.</h1>`)
+
+    </script>
+
+</body>
+</html>

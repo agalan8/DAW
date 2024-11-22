@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U3-A06</title>
+</head>
+<body>
+
+    <!-- Div en el que colocaremos la hora -->
+    <div id="div1"></div>
+
+    <!-- Ventana desplegable desde donde se elegirá la zona horaria a mostrar -->
+    <select id="horario">
+
+        <option value="UTC-12">UTC -12 : Línea internacional de fecha del oeste</option>
+        <option value="UTC-11">UTC -11 : Isla Midway, Samoa</option>
+        <option value="UTC-10">UTC -10 : Hawai</option>
+        <option value="UTC-9">UTC -9 : Alaska</option>
+        <option value="UTC-8">UTC -8 : Hora del pacífico (USA y Canadá)</option>
+        <option value="UTC-7">UTC -7 : Hora de las montañas rocosas (USA y Canadá)</option>
+        <option value="UTC-6">UTC -6 : América central</option>
+        <option value="UTC-5">UTC -5 : Hora central (USA y Canadá)</option>
+        <option value="UTC-4">UTC -4 : Hora del Atlántico (Canadá)</option>
+        <option value="UTC-3">UTC -3 : Buenos Aires, Asunción, Brasilia, Montevideo</option>
+        <option value="UTC-2">UTC -2 : Atlántico central</option>
+        <option value="UTC-1">UTC -1 : Azores</option>
+        <option value="UTC0">UTC 0 : Hora del meridiano de Greenwich, Londres, Dublín</option>
+        <option value="UTC+1">UTC +1 : París, Madrid, Barcelona, Roma</option>
+        <option value="UTC+2">UTC +2 : El Cairo</option>
+        <option value="UTC+3">UTC +3 : Nairobi</option>
+        <option value="UTC+4">UTC +4 : Bakú</option>
+        <option value="UTC+5">UTC +5 : Ekaterimburgo</option>
+        <option value="UTC+6">UTC +6 : Astana</option>
+        <option value="UTC+7">UTC +7 : Bangkok</option>
+        <option value="UTC+8">UTC +8 : Ulán Bator</option>
+        <option value="UTC+9">UTC +9 : Tokio</option>
+        <option value="UTC+10">UTC +10 : Sidney</option>
+        <option value="UTC+11">UTC +11 : Islas Salomón</option>
+        <option value="UTC+12">UTC +12 : Wellington</option>
+    </select>
+
+    <!-- Botón que llama a la funcion para mostrar la hora cada vez que sea pulsado -->
+    <button onclick="imprimir()">Calcular</button>
+
+    <script>
+
+        // Guardamos la fecha actual
+        fechaActual = new Date();
+
+        // Esta función suma o resta la cantidad de horas que le llegan como parámetro
+        function cambiarHora(horas, signo){
+
+            if(signo == "-"){
+
+                /* Calculamos el modulo (horasSobrantes) para comprobar si la resta entre las horas actuales y las horas que se quieren
+                restar estan entre 0 y 23*/
+                horasSobrantes = (fechaActual.getUTCHours() - horas) % 24;
+
+                /* En caso de que el modulo sea positivo quiere decir que la hora actual es mayor que la hora que le queremos restar
+                por tanto el módulo es igual a la resta, por el contrario si el módulo es negativo quiere decir que las horas que queremos
+                restar son mayores que las horas actuales por tanto le sumamos 24 al módulo. Ej:
+                10 + 15 = 25 -> 25 % 24 = 1 por lo que la hora pasa a ser la 1 */
+                res = horasSobrantes < 0 ? horasSobrantes + 24 : horasSobrantes;
+
+            } else if(signo == "+"){
+
+                // Hacemos la misma comprobación que al restar horas
+                horasSobrantes = (fechaActual.getUTCHours() + horas) % 24;
+                res = horasSobrantes < 0 ? horasSobrantes + 24 : horasSobrantes;
+
+            }
+
+        return res;
+
+        }
+
+        /* Esta función inserta un H1 en el div con id div1 con la información dependiendo del valor del option seleccionado en el select anterior,
+        para imprimir las horas hace uso de la funcion cambiarHora()*/
+        function imprimir(){
+
+            opcion = document.getElementById('horario');
+
+            if(opcion.value == 'UTC-12'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(12, "-") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            } else if(opcion.value == 'UTC-11'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(11, "-") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            } else if(opcion.value == 'UTC-10'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(10, "-") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            } else if(opcion.value == 'UTC-9'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(9, "-") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            } else if(opcion.value == 'UTC-8'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(8, "-") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            } else if(opcion.value == 'UTC-7'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(7, "-") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            } else if(opcion.value == 'UTC-6'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(6, "-") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            } else if(opcion.value == 'UTC-5'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(5, "-") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            } else if(opcion.value == 'UTC-4'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(4, "-") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            } else if(opcion.value == 'UTC-3'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(3, "-") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            } else if(opcion.value == 'UTC-2'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(2, "-") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            } else if(opcion.value == 'UTC-1'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(1, "-") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            } else if(opcion.value == 'UTC0'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(0, "+") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            } else if(opcion.value == 'UTC+1'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(1, "+") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            } else if(opcion.value == 'UTC+2'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(2, "+") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            } else if(opcion.value == 'UTC+3'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(3, "+") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            } else if(opcion.value == 'UTC+4'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(4, "+") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            } else if(opcion.value == 'UTC+5'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(5, "+") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            } else if(opcion.value == 'UTC+6'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(6, "+") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            } else if(opcion.value == 'UTC+7'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(7, "+") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            } else if(opcion.value == 'UTC+8'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(8, "+") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            } else if(opcion.value == 'UTC+9'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(9, "+") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            } else if(opcion.value == 'UTC+10'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(10, "+") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            } else if(opcion.value == 'UTC+11'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(11, "+") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            } else if(opcion.value == 'UTC+12'){
+
+                document.getElementById("div1").innerHTML = ("<h1> Son las " + cambiarHora(12, "+") + ":" + fechaActual.getUTCMinutes() + "</h1>");
+
+            }
+        }
+
+    </script>
+</body>
+</html>

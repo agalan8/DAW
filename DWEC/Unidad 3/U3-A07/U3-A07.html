@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U3-A07</title>
+</head>
+<body>
+
+    <script>
+
+        for(i = 0; i < 10; i++){
+
+            max = 20;
+            min = 0;
+
+            /* Multiplica la diferencia entre el ranfo superior y el inferior por un número comprendido entre 0 y 1
+            y sumamos el valor mínimo para asegurarnos de que el número random no este por debajo del rango inferior,
+            por último devolvemos un número igual o inmediatamente inferior con Math.floor() */
+            document.write("<h1>" + Math.floor(Math.random() * (max - min) + min) + "</h1>");
+        }
+
+    </script>
+
+</body>
+</html>

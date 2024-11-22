@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U3-A03</title>
+</head>
+<body>
+
+    <script>
+
+        fechaNacimiento = new Date(2000, 11, 21);
+
+        fechaActual = new Date();
+
+        fechaRes = fechaActual.getTime() - fechaNacimiento.getTime();
+
+        meses = Math.trunc(fechaRes/(1000*60*60*24*31));
+
+        dias = Math.trunc(fechaRes/(1000*60*60*24));
+
+        años = Math.trunc(fechaRes/(1000*60*60*24*365));
+
+        document.write(`<h1>Tengo ${años} años.</h1>`);
+        document.write(`<h1>Tengo ${meses} meses.</h1>`);
+        document.write(`<h1>Tengo ${dias} días.</h1>`);
+
+    </script>
+
+</body>
+</html>

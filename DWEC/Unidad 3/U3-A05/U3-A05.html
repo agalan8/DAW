@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U3-A05</title>
+</head>
+<body>
+
+    <div id="div1"></div>
+
+    <script>
+
+        function cambiarHora(){
+
+            //Agregamos a div1 la hora en formato 12 horas de la fecha actual
+             document.getElementById('div1').innerHTML = ("<h1>" + new Date().toLocaleTimeString('en-US', {timeStyle: 'short', hour12: true}) + "</h1>");
+
+        }
+
+        cambiarHora();
+
+        //Cada 1 segundo llamamos a la función que nos imprime la hora para que se actualice
+        setInterval(cambiarHora, 1000);
+
+    </script>
+
+</body>
+</html>

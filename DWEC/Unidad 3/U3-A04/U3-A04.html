@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U3-A04</title>
+</head>
+<body>
+
+    <script>
+
+        fechaActual = new Date(2024, 10, 25, 22);
+
+        if(fechaActual.getHours() > 6 && fechaActual.getHours() < 12){
+
+            document.write(`<h1>Buenos días.</h1>`);
+
+        } else if(fechaActual.getHours() > 12 && fechaActual.getHours() < 20){
+
+            document.write(`<h1>Buenas tardes.</h1>`);
+
+        } else if(fechaActual.getHours() > 20 || fechaActual.getHours() < 6){
+
+            document.write(`<h1>Buenas noches.</h1>`);
+
+        }
+
+    </script>
+
+</body>
+</html>

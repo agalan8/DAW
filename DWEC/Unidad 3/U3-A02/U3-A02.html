@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U3-A02</title>
+</head>
+<body>
+
+    <script>
+
+        fechaNacimiento = new Date(2000, 11, 21);
+
+        fechaActual = new Date();
+
+        fechaRes = fechaActual - fechaNacimiento;
+
+        document.write(`<h1>Mi edad en milisegundos es ${fechaRes} milisegundos.</h1>`);
+
+        años = fechaRes/(1000*60*60*24*365);
+
+        document.write(`<h1>Mi edad en años es ${años} años.</h1>`);
+
+    </script>
+
+</body>
+</html>

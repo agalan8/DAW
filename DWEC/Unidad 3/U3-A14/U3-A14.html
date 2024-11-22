@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U3-A14</title>
+</head>
+<body>
+
+    <br>
+    <br>
+
+    <label">Introduce una hora (hh:mm:ss o hh:mm):
+        <input type="text" id="hora">
+    </label>
+
+    <button onclick="comprobarHora()">Enviar</button>
+
+    <div id="div1"></div>
+
+    <script>
+
+        function comprobarHora(){
+
+            hora = document.getElementById('hora').value;
+
+            patt1 = new RegExp(/[0-2]{1}[0-3]{1}:[0-5]{1}[0-9]{1}:[0-5]{1}[0-9]{1}/);
+            patt2 = new RegExp(/[0-2]{1}[0-3]{1}:[0-5]{1}[0-9]{1}/);
+
+            if(patt1.test(hora) || patt2.test(hora)){
+
+                document.getElementById('div1').innerHTML = (`<h1>El formato es correcto</h1>`);
+            } else {
+
+                document.getElementById('div1').innerHTML = (`<h1>El formato es incorrecto</h1>`);
+            }
+        }
+
+    </script>
+</body>
+</html>
