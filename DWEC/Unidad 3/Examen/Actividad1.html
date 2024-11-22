@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <h1>Ejercicio 1</h1>
+    <p>Completa el JavaScript en los espacios indicados para mostrar el tamaño, posición y otras propiedades de lla ventana del navegador y de la pantalla del dispositivo.</p>
+
+    <h2>Información de la Ventana del Navegador</h2>
+    <p>Ancho Interior(sin toolbar): <span id="anchoInteriorVentana"></span></p>
+    <p>Alto Interior (sin toolbar): <span id="altoInteriorVentana"></span></p>
+    <p>Ancho Exterior (con toolbar): <span id="anchoExteriorVentana"></span></p>
+    <p>Alto Exterior (con toolbar): <span id="altoExteriorVentana"></span></p>
+    <p>Posición Horizontal: <span id="posicionX"></span></p>
+    <p>Posición Vertical: <span id="posicionY"></span></p>
+    <p>Número de frames: <span id="numFrames"></span></p>
+
+    <h2>Información de la Pantalla del Dispositivo</h2>
+    <p>Ancho Total de Pantalla: <span id="anchoPantallaTotal"></span></p>
+    <p>Alto Total de Pantalla: <span id="altoPantallaTotal"></span></p>
+    <p>Profundida de Color: <span id="profundidadColor"></span></p>
+
+    <script>
+
+        document.getElementById('anchoInteriorVentana').innerHTML = window.innerWidth ;
+        document.getElementById('altoInteriorVentana').innerHTML = window.innerHeight ;
+        document.getElementById('anchoExteriorVentana').innerHTML = window.outerWidth ;
+        document.getElementById('altoExteriorVentana').innerHTML = window.outerHeight ;
+        document.getElementById('posicionX').innerHTML = window.screenX ;
+        document.getElementById('posicionY').innerHTML = window.screenY ;
+        document.getElementById('numFrames').innerHTML = window.frame ;
+
+        document.getElementById('anchoPantallaTotal').innerHTML = screen.width ;
+        document.getElementById('altoPantallaTotal').innerHTML = screen.height ;
+        document.getElementById('profundidadColor').innerHTML = screen.colorDepth ;
+
+    </script>
+
+</body>
+</html>

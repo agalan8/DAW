@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor de Monedas</title>
+
+    <script>
+
+        function calcular(){
+            mOrigen = document.getElementById('mOrigen').value;
+            mDestino = document.getElementById('mDestino').value;
+            cantidad = document.getElementById('cantidad').value;
+
+            window.open(`Conversion.html?mOrigen=${mOrigen}&mDestino=${mDestino}&cantidad=${cantidad}`);
+        }
+
+
+    </script>
+</head>
+<body>
+
+    <br><br>
+    <label>Moneda de origen:
+        <select id="mOrigen">
+            <option value="euro">Euro</option>
+            <option value="dolar">Dólar</option>
+            <option value="libra">Libra</option>
+        </select>
+    </label>
+    <br><br>
+    <label>Moneda de destino:
+        <select id="mDestino">
+            <option value="euro">Euro</option>
+            <option value="dolar">Dólar</option>
+            <option value="libra">Libra</option>
+        </select>
+    </label>
+    <br><br>
+    <label>Cantidad:
+        <input type="text" id="cantidad">
+    </label>
+    <br><br>
+    <button onclick="calcular()">Calcular</button>
+
+</body>
+</html>

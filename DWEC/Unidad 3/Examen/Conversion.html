@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de Conversion</title>
+</head>
+    <body>
+
+        <p id="imprimirDatos"></p>
+
+    </body>
+    <script>
+
+        function conversion(mOrigen, mDestino, cantidad){
+
+            if(mOrigen == mDestino){
+                return cantidad;
+            } else if (mOrigen == "euro" && mDestino == "dolar"){
+                return parseInt(cantidad) * 1.2;
+            } else if (mOrigen == "euro" && mDestino == "libra"){
+                return parseInt(cantidad) * 1.3;
+            } else if (mOrigen == "dolar" && mDestino == "euro"){
+                return parseInt(cantidad) / 1.2;
+            } else if (mOrigen == "dolar" && mDestino == "libra"){
+                return parseInt(cantidad) * 1.5;
+            } else if (mOrigen == "libra" && mDestino == "euro"){
+                return parseInt(cantidad) / 1.3;
+            } else if (mOrigen == "libra" && mDestino == "dolar"){
+                return parseInt(cantidad) / 1.5;
+            }
+        }
+
+        datos = window.location.search;
+        datos = new URLSearchParams(datos);
+
+        mOrigen = datos.get('mOrigen');
+        mDestino = datos.get('mDestino');
+        cantidad = datos.get('cantidad');
+
+        document.getElementById('imprimirDatos').innerHTML = "Conversión de " + mOrigen + " a " + mDestino + "\n Cantidad: " + cantidad + "\n Moneda de origen: " + mOrigen + "\n Moneda de destino: " + mDestino + "\n Valor final: " + conversion(mOrigen, mDestino, cantidad) + "\n Tamaño de la ventana (ancho): " + window.innerWidth + "\n Tamaño de la ventana (alto): " + window.innerHeight;
+
+    </script>
+</html>
