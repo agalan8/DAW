@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js"></script>
+    <title>U4-A13</title>
+</head>
+<body>
+
+    <br><br>
+    <label>Añadir tarea:
+        <input type="text" id="tarea">
+    </label>
+    <button onclick="anadirTarea()">Añadir</button>
+    <br><br>
+    <label>Completar tarea:
+        <input type="number" id="indiceC">
+    </label>
+    <button onclick="completarTarea()">Completar</button>
+    <br><br>
+    <label>Eliminar tarea:
+        <input type="number" id="indiceE">
+    </label>
+    <button onclick="eliminarTarea()">Eliminar</button>
+
+    <h1>-- Lista de tareas --</h1>
+    <button onclick="completadas()">Completadas</button>
+    <button onclick="pendientes()">Pendientes</button>
+    <button onclick="actualizarLista()">Todas</button>
+    <br><br>
+    <div id="tareas"></div>
+
+</body>
+</html>
