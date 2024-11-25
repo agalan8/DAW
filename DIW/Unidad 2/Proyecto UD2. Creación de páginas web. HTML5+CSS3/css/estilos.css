@@ -8,12 +8,6 @@ html, body{
     margin: 0;
 }
 
-body{
-    display: grid;
-    align-items: center;
-    grid-template-rows: 200px 760px;
-}
-
 a{
     color: white;
     text-decoration: none;
@@ -28,32 +22,74 @@ nav ul li{
     font-size: 30px;
     display: inline;
     margin-right: 85px;
+
+}
+
+.menuTransicion{
+    position: relative;
+    transition: color 0.5s ease;
+}
+
+.menuTransicion:hover{
+    color: #7EF0D4;
+}
+
+.menuTransicion::after {
+    content: ""; /* Esto crea el pseudo-elemento */
+    position: absolute; /* Lo coloca fuera del flujo normal del documento */
+    bottom: 0; /* Coloca la línea en la parte inferior del enlace */
+    left: 0; /* Comienza en el extremo izquierdo */
+    width: 0; /* Inicia sin ancho */
+    height: 2px; /* Altura de la línea */
+    background-color: white; /* Color de la línea */
+    transition: width 0.5s ease; /* Transición suave en el ancho */
+}
+
+.menuTransicion:hover::after {
+    width: 100%; /* Cuando el ratón pasa por encima, la línea se extiende completamente */
 }
 
 .iniciar-sesion{
+    background: linear-gradient(to bottom, #D97BC7 60%, #6A3F8C 100%);
+    color: white;
     width: 265px;
     height: 89px;
     border-radius: 50px;
     font-size: 30px;
     border: none;
+    cursor: pointer;
 }
 
 .comenzar{
-    width: 265px;
-    height: 89px;
     margin-right: 82px;
     margin-left: 53px;
+}
+
+.comenzar button{
+    background: linear-gradient(to bottom, #7EF0D4 60%, #E0B0FF 100%);
+    width: 265px;
+    height: 89px;
     border-radius: 50px;
     font-size: 30px;
     color: #6A3F8C;
-    border: none
+    border: none;
+    cursor: pointer;
+}
+
+.animacionButton {
+    transition: transform 0.3s ease; /* Transición suave */
+
+}
+
+.animacionButton:hover {
+    transform: scale(1.05);
 }
 
 /* radial-gradient(rgb(106,63,140, 0) 0%, rgb(106,63,140, 0.1) 30%, rgb(36,10,52,0.6) 65%) */
 
 .bodyHome{
     background-image: url(../img/fondo1.png), url(../img/fondo2.png) ;
-    background-position: -320px center, center center;
+    background-position: -360px center, center center;
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
@@ -66,13 +102,17 @@ nav ul li{
 
 }
 
+.menuLogo a{
+    margin-left: 94px;
+}
+
 .menuLogo {
-    display: inline-flex;
+    display: inline-grid;
+    grid-template-columns: auto auto;
     align-items: center;
 }
 
 .menu img{
-    margin-left: 94px;
     width: 65px;
     height: 132px;
 }
@@ -90,30 +130,13 @@ nav ul li{
 }
 
 .eslogan{
-
     justify-self: center;
     align-self: stretch;
     display: flex;
     align-items: center;
-    font-size: 70px;
-    border: 1px solid white;
-    text-shadow:
-    -1px -1px 0 #7EF0D4,  /* Sombra superior izquierda */
-    1px -1px 0 #7EF0D4,   /* Sombra superior derecha */
-    -1px 1px 0 #7EF0D4,   /* Sombra inferior izquierda */
-    1px 1px 0 #7EF0D4,
-    -2px -2px 0 #7EF0D4,  /* Sombra superior izquierda */
-    2px -2px 0 #7EF0D4,   /* Sombra superior derecha */
-    -2px 2px 0 #7EF0D4,   /* Sombra inferior izquierda */
-    2px 2px 0 #7EF0D4,    /* Sombra inferior derecha */
-    -3px -3px 0 #7EF0D4,  /* Sombra adicional para mayor grosor */
-    3px -3px 0 #7EF0D4,
-    -3px 3px 0 #7EF0D4,
-    3px 3px 0 #7EF0D4;
-    color:#6A3F8C;
-    text-align: center;
-    padding: 0;
-
+    margin-top: 170px;
+    margin-left: 180px;
+    margin-right: 180px;
 }
 
 .raleway-regular {
