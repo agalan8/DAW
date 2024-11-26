@@ -34,7 +34,7 @@ function completarTarea(){
     // Compruebo si el índice se encuentra en el array
     if(indice >= 0 && indice < listaTareas.length){
         // Si se encuentra cambio el estado de la tarea a completada
-        listaTareas[indice].estado = "completada"
+        listaTareas[indice].estado = "completada";
         // Actualizo la lista
         actualizarLista();
     } else {
