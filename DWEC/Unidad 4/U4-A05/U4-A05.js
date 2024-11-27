@@ -5,7 +5,6 @@ function anadir(){
 
     // Cada palabra que introduce el usuario se añade al final del array
     palabras.push(document.getElementById('palabras').value);
-
     // Imprimo el array actualizado para que el usuario vea las palabras insertadas
     document.getElementById('array').innerHTML = `Array actual: ${palabras}`;
 }
@@ -18,19 +17,15 @@ function enviar(){
         reverse para ordenar las letras al reves y join para volver a formar la palabra pero con las letras del reves */
         return palabra.slice().split('').reverse().join('')
     });
-
     // Obtengo la primera palabra del array
     primeraPalabra = palabras[0];
 
     // Obtengo la última palabra del array
     ultimaPalabra = palabras[palabras.length - 1];
-
     // Obtengo el número de palabras del array
     numPalabras = palabras.length;
-
     // Ordeno el array de la a a la z
     palabrasAZ = palabras.slice().sort();
-
     // Ordeno el array de la z a la a
     palabrasZA = palabras.slice().sort(function (a,b) {
         if(a < b){
@@ -41,7 +36,6 @@ function enviar(){
             return 0;
         }
     })
-
     // Creo una nueva ventana
     nuevaVentana = window.open();
     //Imprimo en la nueva ventana las variables creadas anteriormente
