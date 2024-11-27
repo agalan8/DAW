@@ -25,6 +25,10 @@ Creamos un índice para que las consultas sean más rápidas:
 
 $table -> index('departamento_id');
 
+Confirmamos la migración en la terminal:
+
+ php artisan migrate
+
 3. Insertamos las filas a la tabla empleados
 
 *terminal*
