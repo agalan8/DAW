@@ -349,17 +349,45 @@ nav ul li{
     content: "";
     height: 600px;
     position: absolute;
-    top: 80px;
+    top: 90px;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to right, rgba(217, 123, 199, 0.5) 0%, rgba(36, 10, 52, 0.5) 100%); /* Gradiente con opacidad 50% */
+    background: linear-gradient(to right, rgba(217, 123, 199, 0.5) 0%, rgba(36, 10, 52, 0.5) 100%);
     filter: blur(50px);
     z-index: -1;
     pointer-events: none;
 }
 
+.quienes-somos img{
+    animation: cambiar-posicion-izquierda 1400ms ease-in-out;
+}
 
+@keyframes cambiar-posicion-izquierda{
+    0%{
+        transform: translateX(-1000px);
+    }
+}
+
+.quienes-somos h2{
+    animation: cambiar-posicion-arriba 1400ms ease-in-out;
+}
+
+@keyframes cambiar-posicion-arriba{
+    0%{
+        transform: translateY(-1000px);
+    }
+}
+
+.quienes-somos p{
+    animation: cambiar-posicion-derecha 2000ms ease-in-out;
+}
+
+@keyframes cambiar-posicion-derecha{
+    0%{
+        transform: translateX(5000px);
+    }
+}
 
 .texto-quienes-somos{
     display: flex;
