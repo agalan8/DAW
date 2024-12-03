@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Contacto</title>
+</head>
+<body class="body-gradiente">
+    <header class="menu">
+        <div class="menuLogo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="logo">
+            </a>
+            <p class="montserrat-regular">ESTANTERÍA <br><span class="montserrat-extraLight">VIRTUAL</span></p>
+        </div>
+        <nav>
+            <ul class="ulMenu raleway-bold">
+                <li><a class="menuTransicion" href="blog.html">BLOG</a></li>
+                <li><a class="menuTransicion" href="quienes-somos.html">QUIÉNES SOMOS</a></li>
+                <li><a class="menuTransicionActivo" href="contacto.html">CONTACTO</a></li>
+            </ul>
+            <div class="contenedor-botones">
+                <a href="iniciar-sesion.html">
+                    <button class="animacionButton iniciar-sesion raleway-bold">Iniciar sesión</button>
+                </a>
+                <a class="comenzar" href="comenzar.html">
+                    <button class="animacionButton raleway-bold">Comenzar</button>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="contenedor-texto-contacto">
+        <h1 class="montserrat-bold">Somos todo oídos</h1>
+        <p class="raleway-bold">Rellena el formulario para comenzar una conversación - Te contestaremos en seguida</p>
+    </div>
+    <div class="contenedor-contacto">
+        <div class="lado-izquierdo">
+            <div class="imagen-contacto">
+                <div class="elipse-luz-imagen"></div>
+                <img src="img/contacto.png" alt="contacto" class="contacto">
+                <div class="elipse-sombra"></div>
+            </div>
+        </div>
+        <div class="lado-derecho raleway-bold">
+            <div class="elipse-luz-form"></div>
+            <form action="#" method="POST" class="form-contacto">
+                <label for="name">Email:</label>
+                <input class="raleway-regular" type="text" id="email" name="email" required>
+
+                <label for="nombre">Nombre:</label>
+                <input class="raleway-regular" type="nombre" id="nombre" name="nombre" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea class="raleway-regular" name="mensaje" id="mensaje"></textarea>
+
+                <div class="button-contenedor">
+                    <button type="submit" class="button-enviar raleway-bold animacionButton">Enviar</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="contenedor-footer">
+            <div class="contenedor-politicas">
+                <p class="raleway-bold">© 2024 Estantería virtual</p>
+                <p class="raleway-light">AVISO LEGAL</p>
+                <p class="raleway-light">POLÍTICA DE COOKIES</p>
+                <p class="raleway-light">POLÍTICA DE PRIVACIDAD</p>
+            </div>
+            <div class="contenedor-rrss">
+                <img src="img/logo-x.png" alt="logo-x">
+                <img src="img/logo-facebook.png" alt="logo-facebook">
+                <img src="img/logo-instagram.png" alt="logo-instagram">
+                <img src="img/logo-linkedin.png" alt="logo-linkedin">
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -15,14 +15,29 @@ a{
 
 nav{
     display: inline-flex;
+    gap: 200px;
     align-items: center;
 }
 
-nav ul li{
-    font-size: 30px;
-    display: inline;
-    margin-right: 85px;
+nav ul{
+    display: inline-flex;
+    gap: 80px;
+}
 
+nav ul li{
+    font-size: 25px;
+    display: inline;
+}
+.menu{
+    margin-top: 31px;
+    display: inline-flex;
+    gap: 50px;
+    grid-template-columns: auto auto;
+}
+
+.contenedor-botones{
+    display: inline-flex;
+    gap: 50px;
 }
 
 .menuTransicion{
@@ -49,28 +64,44 @@ nav ul li{
     width: 100%; /* Cuando el ratón pasa por encima, la línea se extiende completamente */
 }
 
+.menuTransicionActivo{
+    position: relative;
+    transition: color 0.5s ease;
+}
+
+.menuTransicionActivo:hover{
+    color: #7EF0D4;
+}
+
+.menuTransicionActivo::after {
+    content: ""; /* Esto crea el pseudo-elemento */
+    position: absolute; /* Lo coloca fuera del flujo normal del documento */
+    bottom: 0; /* Coloca la línea en la parte inferior del enlace */
+    left: 0; /* Comienza en el extremo izquierdo */
+    height: 2px; /* Altura de la línea */
+    background-color: white; /* Color de la línea */
+    width: 100%; /* Transición suave en el ancho */
+}
+
 .iniciar-sesion{
     background: linear-gradient(to bottom, #D97BC7 60%, #6A3F8C 100%);
     color: white;
-    width: 265px;
-    height: 89px;
+    width: 225px;
+    height: 75px;
     border-radius: 50px;
-    font-size: 30px;
+    font-size: 25px;
     border: none;
     cursor: pointer;
 }
 
-.comenzar{
-    margin-right: 82px;
-    margin-left: 53px;
-}
 
 .comenzar button{
     background: linear-gradient(to bottom, #7EF0D4 60%, #E0B0FF 100%);
-    width: 265px;
-    height: 89px;
+    width: 225px;
+    height: 75px;
     border-radius: 50px;
-    font-size: 30px;
+    font-size: 25px;
+    border-radius: 50px;
     color: #6A3F8C;
     border: none;
     cursor: pointer;
@@ -95,12 +126,16 @@ nav ul li{
     background-blend-mode: overlay;
 }
 
-.menu{
-    margin-top: 31px;
-    display: inline-grid;
-    grid-template-columns: auto auto;
-
+.body-gradiente{
+    background: linear-gradient(-116deg, #240A34 34%, #150D3F 83%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
+
 
 .menuLogo a{
     margin-left: 94px;
@@ -129,6 +164,7 @@ nav ul li{
     color: white;
 }
 
+
 .eslogan{
     justify-self: center;
     align-self: stretch;
@@ -137,6 +173,242 @@ nav ul li{
     margin-top: 170px;
     margin-left: 180px;
     margin-right: 180px;
+}
+
+.contenedor-texto-contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+
+}
+
+.contenedor-texto-contacto h1{
+    font-size: 60px;
+    color: #E0B0FF;
+}
+
+.contenedor-texto-contacto p{
+    font-size: 20px;
+    color: white;
+}
+
+.contenedor-contacto{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10000px;
+
+}
+
+.lado-izquierdo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 180px;
+}
+
+.imagen-contacto{
+    position: relative;
+}
+
+
+.elipse-luz-imagen{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 413px;
+    height: 408px;
+    background-color: #E0B0FF;
+    border-radius: 50%;
+    filter: blur(250px);
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+}
+
+.contacto{
+    position: relative;
+    width: 450px;
+    height: auto;
+    z-index: 1;
+}
+
+.elipse-sombra{
+    position: absolute;
+    bottom: -50px;
+    width: 534px;
+    height: 73px;
+    background-color: #240A34;
+    border-radius: 50%;
+    filter: blur(10px);
+    transform: translateX(-50%);
+    left: 50%;
+    pointer-events: none;
+}
+
+.imgContacto{
+    width: 568.74px;
+    height: auto;
+    top: 283px;
+    left: 7px;
+    position: absolute;
+}
+
+.lado-derecho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    padding-right: 180px;
+}
+
+.form-contacto{
+    padding: 30px 62px 20px 100px;
+    border-radius: 30px;
+    border: 6px solid #E0B0FF;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-contacto label{
+    margin-bottom: 10px;
+}
+
+.form-contacto input{
+    margin-bottom: 25px;
+    background-color: transparent;
+    border: 2px solid #E0B0FF;
+    border-radius: 15px;
+    width: 603px;
+    height: 30px;
+    padding: 7px 10px 7px 10px;
+    color: white;
+    font-size: 16px;
+}
+
+.form-contacto textarea{
+    margin-bottom: 28px;
+    background-color: transparent;
+    border: 2px solid #E0B0FF;
+    border-radius: 15px;
+    padding: 10px 10px 10px 10px;
+    width: 751px;
+    height: 110px;
+    color: white;
+    font-size: 15px;
+    resize: none;
+}
+
+.button-contenedor{
+    display: flex;
+    justify-content: center;
+}
+
+.button-enviar{
+    background: linear-gradient(to bottom, #7EF0D4 60%, #E0B0FF 100%);
+    width: 180px;
+    height: 58px;
+    border-radius: 50px;
+    font-size: 25px;
+    color: #6A3F8C;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.elipse-luz-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 526px;
+    height: 520px;
+    background-color: #E0B0FF;
+    border-radius: 50%;
+    filter: blur(250px);
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+}
+
+.contenedor-quienes-somos{
+    display: flex;
+    flex-direction: column;
+}
+
+.quienes-somos{
+    display: inline-flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.quienes-somos::before{
+    content: "";
+    height: 600px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(217, 123, 199, 0.5) 0%, rgba(36, 10, 52, 0.5) 100%); /* Gradiente con opacidad 50% */
+    filter: blur(50px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+
+.texto-quienes-somos{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-right: 90px;
+}
+
+.texto-quienes-somos h2{
+    color: #E0B0FF;
+    font-size: 107px;
+    margin-top: 90px;
+    margin-bottom: 70px;
+}
+
+.texto-quienes-somos p{
+    font-size: 29px;
+    text-align: justify;
+}
+
+.contenedor-footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgba(217, 123, 199, 0.3);
+    align-items: center;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+}
+
+.contenedor-politicas{
+    display: inline-flex;
+    gap: 26px;
+    margin-left: 13px;
+    color: white;
+    font-size: 17px;
+}
+
+.contenedor-rrss{
+    display: inline-flex;
+    margin-right: 24px;
+    gap: 22px;
+}
+
+.contenedor-rrss img{
+    width: auto;
+    height: 17px;
+
 }
 
 .raleway-regular {
@@ -153,11 +425,25 @@ nav ul li{
   font-style: normal;
 }
 
+.raleway-light{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+
 .montserrat-regular{
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+.montserrat-light{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .montserrat-extraLight{
@@ -172,4 +458,9 @@ nav ul li{
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-  }
+}
+
+.prueba{
+    height: 1000px;
+    background-color: transparent;
+}
