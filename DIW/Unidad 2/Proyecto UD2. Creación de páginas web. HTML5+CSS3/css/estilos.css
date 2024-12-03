@@ -215,7 +215,6 @@ nav ul li{
     position: relative;
 }
 
-
 .elipse-luz-imagen{
     position: absolute;
     top: 50%;
@@ -224,7 +223,7 @@ nav ul li{
     height: 408px;
     background-color: #E0B0FF;
     border-radius: 50%;
-    filter: blur(250px);
+    filter: blur(150px);
     transform: translate(-50%,-50%);
     pointer-events: none;
 }
