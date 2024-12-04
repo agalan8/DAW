@@ -1,0 +1,49 @@
+
+.contenedor-juego{
+    display: grid;
+    grid-template-areas: "titulo titulo titulo"
+                         "informacion tablero botones";
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+}
+
+.contenedor-juego h1{
+    text-align: center;
+    grid-area: titulo;
+}
+
+.contenedor-tablero{
+    display: grid;
+    grid-area: tablero;
+    grid-template-columns: repeat(10, 1fr);
+    border: 2px solid black;
+}
+
+.contenedor-informacion{
+    grid-area: informacion;
+    border: 2px solid black;
+}
+
+.contenedor-botones{
+    grid-area: botones;
+    margin-left: 200px;
+}
+
+.iniciar{
+    width: 100px;
+    height: 50px;
+    background-color: rgb(55, 173, 55);
+    cursor: pointer;
+}
+
+.contenedor-tablero div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 80px;
+}
