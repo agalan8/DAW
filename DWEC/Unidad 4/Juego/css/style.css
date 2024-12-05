@@ -1,32 +1,33 @@
 
-.contenedor-juego{
+.contenedor{
     display: grid;
-    grid-template-areas: "titulo titulo titulo"
-                         "informacion tablero botones";
-    align-items: center;
-    justify-content: center;
-    border: 2px solid black;
+    grid-template-rows: 90px 1fr;
 }
 
-.contenedor-juego h1{
+.contenedor h1{
     text-align: center;
-    grid-area: titulo;
+}
+
+.contenedor-juego{
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .contenedor-tablero{
     display: grid;
-    grid-area: tablero;
     grid-template-columns: repeat(10, 1fr);
     border: 2px solid black;
 }
 
+.contenedor-tablero div{
+}
+
 .contenedor-informacion{
-    grid-area: informacion;
     border: 2px solid black;
 }
 
 .contenedor-botones{
-    grid-area: botones;
     margin-left: 200px;
 }
 
