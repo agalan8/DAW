@@ -7,6 +7,7 @@ html, body{
     height: 100%;
     min-height: 100vh;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 a{
@@ -16,29 +17,53 @@ a{
 
 nav{
     display: inline-flex;
-    gap: 200px;
+    gap: 100px;
     align-items: center;
+    font-size: 25px;
 }
 
 nav ul{
     display: inline-flex;
-    gap: 80px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 70px;
 }
 
 nav ul li{
-    font-size: 25px;
     display: inline;
 }
+
 .menu{
     margin-top: 31px;
+    width: 100%;
+    height: 120px;
     display: inline-flex;
-    gap: 50px;
+    gap: 25px;
     grid-template-columns: auto auto;
 }
 
 .contenedor-botones{
     display: inline-flex;
     gap: 50px;
+}
+
+.contenedor-perfil{
+    display: inline-flex;
+    margin-left: 100px;
+    gap: 25px;
+    justify-content: right;
+    align-items: center;
+    color: white;
+}
+
+.contenedor-perfil p{
+    font-size: 25px;
+}
+
+.img-perfil{
+    width: 89px;
+
 }
 
 .menuTransicion{
@@ -138,34 +163,29 @@ nav ul li{
     overflow-x: hidden;
 }
 
-
-.menuLogo a{
-    margin-left: 94px;
-}
-
 .menuLogo {
-    display: inline-grid;
-    grid-template-columns: auto auto;
+    margin-left: 90px;
+    display: inline-flex;
+    justify-content: center;
     align-items: center;
 }
 
-.menu img{
+.menuLogo img{
     width: 65px;
     height: 132px;
 }
 
-.menu p{
+.menuLogo p{
     margin-right: 130px;
     text-align: left;
     font-size: 33px;
     color: white;
 }
 
-.menu span{
+.menuLogo span{
     font-size: 33px;
     color: white;
 }
-
 
 .eslogan{
     justify-self: center;
@@ -574,7 +594,222 @@ nav ul li{
     }
 }
 
+.boton-subir{
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    cursor: pointer;
+}
 
+.boton-subir img{
+    width: 58px;
+    height: auto;
+}
+
+.contenedor-mis-estanterias{
+    display: flex;
+    grid-template-columns: auto;
+    border-top: 1px solid rgba(224, 176, 255, 0.3);
+    box-shadow: inset 0 10px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+.menu-lateral{
+    color: white;
+    width: 23%;
+    height: 739px;
+    font-size: 25px;
+    border-right: 1px solid rgba(224, 176, 255, 0.3);
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu-lateral ul{
+    padding-top: 30px;
+    padding-right: 18px;
+}
+
+.opcion{
+    color: white;
+    margin: 5px 0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    width: 422px;
+    height: 61px;
+}
+
+.opcion-activa{
+    background-color: rgba(224, 176, 255, 0.11);
+    justify-content: center;
+    color: white;
+    margin: 5px 0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 422px;
+    height: 61px;
+}
+
+.opcion-estanteria::before{
+    content: '';
+    background-image: url('../img/icono-estanteria.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-left: 40px;
+    margin-right: 36px;
+    flex-shrink: 0;
+}
+
+.opcion-albumes::before{
+    content: '';
+    background-image: url('../img/icono-album.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-left: 40px;
+    margin-right: 36px;
+    flex-shrink: 0;
+}
+
+.opcion-compartido::before{
+    content: '';
+    background-image: url('../img/icono-compartido.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-left: 40px;
+    margin-right: 36px;
+    flex-shrink: 0;
+}
+
+.opcion-favoritos::before{
+    content: '';
+    background-image: url('../img/icono-favorito.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-left: 40px;
+    margin-right: 36px;
+    flex-shrink: 0;
+}
+
+.opcion-reciente::before{
+    content: '';
+    background-image: url('../img/icono-reciente.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-left: 40px;
+    margin-right: 36px;
+    flex-shrink: 0;
+}
+
+.listado-estanterias{
+    width: 100%;
+    height: 629px;
+    position: relative;
+    padding-top: 80px;
+    margin-top: 10px;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.listado-estanterias::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+
+
+.listado-estanterias::-webkit-scrollbar-thumb {
+    background: linear-gradient(-116deg, #7EF0D4 0%, #E0B0FF 44%, #7EF0D4 100%); /* Color del "thumb" de la barra */
+    border-radius: 50px; /* Bordes redondeados para el thumb */
+}
+
+.listado-estanterias::-webkit-scrollbar-track {
+    background-color: transparent; /* Color del fondo de la pista */
+}
+
+.gradiente-listado-estanterias::before{
+    content: "";
+    height: 739px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to left, #6A3F8C 0%, #150D3F  100%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.estanterias{
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 93px;
+    height: 739px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.estanteria{
+    width: 576px;
+    height: 298px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+
+.elipse-luz-estanteria{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 543px;
+    height: 273px;
+    background-color: #240A34;
+    border-radius: 50%;
+    filter: blur(86px);
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+
+}
+
+.estanteria p{
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    top: 22px;
+    left: 43px;
+    z-index: 1;
+}
+
+.estanteria-img{
+    position: absolute;
+    z-index: 1;
+    top: 74px;
+    left: 47px;
+}
+
+.puntos{
+
+    position: absolute;
+    z-index: 1;
+    top: 17px;
+    right: 11px;
+
+}
 
 .contenedor-footer{
     display: flex;
@@ -654,6 +889,13 @@ nav ul li{
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
+    font-style: normal;
+}
+
+.montserrat-semibold{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
     font-style: normal;
 }
 
