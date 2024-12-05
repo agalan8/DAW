@@ -10,60 +10,62 @@
     <title>Contacto</title>
 </head>
 <body class="body-gradiente">
-    <header class="menu">
-        <div class="menuLogo">
-            <a href="index-sesion.html">
-                <img src="img/logo.png" alt="logo">
-            </a>
-            <p class="montserrat-regular">ESTANTERÍA <br><span class="montserrat-extraLight">VIRTUAL</span></p>
-        </div>
-        <nav>
-            <ul class="ulMenu raleway-bold">
-                <li><a class="menuTransicion" href="blog-sesion.html">BLOG</a></li>
-                <li><a class="menuTransicion" href="quienes-somos-sesion.html">QUIÉNES SOMOS</a></li>
-                <li><a class="menuTransicionActivo" href="contacto-sesion.html">CONTACTO</a></li>
-                <li><a class="menuTransicion" href="mis-estanterias.html">MIS ESTANTERÍAS</a></li>
-            </ul>
-            <div class="contenedor-perfil">
-                <p class="raleway-bold">Mi perfil</p>
-                <div class="contenedor-img-perfil">
-                    <img src="img/perfil.png" alt="perfil">
+    <div class="pagina">
+        <header class="menu">
+            <div class="menuLogo">
+                <a href="index-sesion.html">
+                    <img src="img/logo.png" alt="logo">
+                </a>
+                <p class="montserrat-regular">ESTANTERÍA <br><span class="montserrat-extraLight">VIRTUAL</span></p>
+            </div>
+            <nav>
+                <ul class="ulMenu raleway-bold">
+                    <li><a class="menuTransicion" href="blog-sesion.html">BLOG</a></li>
+                    <li><a class="menuTransicion" href="quienes-somos-sesion.html">QUIÉNES SOMOS</a></li>
+                    <li><a class="menuTransicionActivo" href="contacto-sesion.html">CONTACTO</a></li>
+                    <li><a class="menuTransicion" href="mis-estanterias.html">MIS ESTANTERÍAS</a></li>
+                </ul>
+                <div class="contenedor-perfil">
+                    <p class="raleway-bold">Mi perfil</p>
+                    <div class="contenedor-img-perfil">
+                        <img src="img/perfil.png" alt="perfil">
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="cuerpo">
+            <div class="contenedor-texto-contacto">
+                <h1 class="montserrat-bold">Somos todo oídos</h1>
+                <p class="raleway-bold">Rellena el formulario para comenzar una conversación - Te contestaremos en seguida</p>
+            </div>
+            <div class="contenedor-contacto">
+                <div class="lado-izquierdo">
+                    <div class="imagen-contacto">
+                        <div class="elipse-luz-imagen"></div>
+                        <img src="img/contacto.png" alt="contacto" class="contacto">
+                        <div class="elipse-sombra"></div>
+                    </div>
+                </div>
+                <div class="lado-derecho raleway-bold">
+                    <div class="elipse-luz-form"></div>
+                    <form action="#" method="POST" class="form-contacto">
+                        <label for="name">Email:</label>
+                        <input class="raleway-regular" type="text" id="email" name="email" required>
+
+                        <label for="nombre">Nombre:</label>
+                        <input class="raleway-regular" type="nombre" id="nombre" name="nombre" required>
+
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea class="raleway-regular" name="mensaje" id="mensaje"></textarea>
+
+                        <div class="button-contenedor">
+                            <button type="submit" class="button-enviar raleway-bold animacionButton">Enviar</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="contenedor-texto-contacto">
-        <h1 class="montserrat-bold">Somos todo oídos</h1>
-        <p class="raleway-bold">Rellena el formulario para comenzar una conversación - Te contestaremos en seguida</p>
-    </div>
-    <div class="contenedor-contacto">
-        <div class="lado-izquierdo">
-            <div class="imagen-contacto">
-                <div class="elipse-luz-imagen"></div>
-                <img src="img/contacto.png" alt="contacto" class="contacto">
-                <div class="elipse-sombra"></div>
-            </div>
-        </div>
-        <div class="lado-derecho raleway-bold">
-            <div class="elipse-luz-form"></div>
-            <form action="#" method="POST" class="form-contacto">
-                <label for="name">Email:</label>
-                <input class="raleway-regular" type="text" id="email" name="email" required>
-
-                <label for="nombre">Nombre:</label>
-                <input class="raleway-regular" type="nombre" id="nombre" name="nombre" required>
-
-                <label for="mensaje">Mensaje:</label>
-                <textarea class="raleway-regular" name="mensaje" id="mensaje"></textarea>
-
-                <div class="button-contenedor">
-                    <button type="submit" class="button-enviar raleway-bold animacionButton">Enviar</button>
-                </div>
-            </form>
-
         </div>
     </div>
-
     <footer>
         <div class="contenedor-footer">
             <div class="contenedor-politicas">
@@ -80,6 +82,5 @@
             </div>
         </div>
     </footer>
-
 </body>
 </html>
