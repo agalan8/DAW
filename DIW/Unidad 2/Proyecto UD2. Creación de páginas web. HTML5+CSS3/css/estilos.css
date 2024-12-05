@@ -202,7 +202,6 @@ nav ul li{
     flex-direction: column;
     align-items: center;
     margin-bottom: 60px;
-
 }
 
 .contenedor-texto-contacto h1{
@@ -220,7 +219,7 @@ nav ul li{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 10000px;
+    margin-bottom: 33px;
 
 }
 
