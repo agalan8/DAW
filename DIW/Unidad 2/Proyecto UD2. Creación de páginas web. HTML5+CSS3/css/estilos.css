@@ -36,13 +36,14 @@ nav ul li{
     width: 100%;
     height: 100%;
     display: inline-flex;
-    gap: 25px;
+    gap: 50px;
     grid-template-columns: auto auto;
     box-sizing: border-box;
 }
 
 .contenedor-botones{
     display: inline-flex;
+    margin-left: 100px;
     gap: 50px;
 }
 
@@ -64,47 +65,47 @@ nav ul li{
 
 }
 
-.menuTransicion{
+.menu-transicion{
     position: relative;
     transition: color 0.5s ease;
 }
 
-.menuTransicion:hover{
+.menu-transicion:hover{
     color: #7EF0D4;
 }
 
-.menuTransicion::after {
-    content: ""; /* Esto crea el pseudo-elemento */
-    position: absolute; /* Lo coloca fuera del flujo normal del documento */
-    bottom: 0; /* Coloca la línea en la parte inferior del enlace */
-    left: 0; /* Comienza en el extremo izquierdo */
-    width: 0; /* Inicia sin ancho */
-    height: 2px; /* Altura de la línea */
-    background-color: white; /* Color de la línea */
-    transition: width 0.5s ease; /* Transición suave en el ancho */
+.menu-transicion::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.5s ease;
 }
 
-.menuTransicion:hover::after {
-    width: 100%; /* Cuando el ratón pasa por encima, la línea se extiende completamente */
+.menu-transicion:hover::after {
+    width: 100%;
 }
 
-.menuTransicionActivo{
+.menu-transicion-activo{
     position: relative;
     transition: color 0.5s ease;
 }
 
-.menuTransicionActivo:hover{
+.menu-transicion-activo:hover{
     color: #7EF0D4;
 }
 
-.menuTransicionActivo::after {
-    content: ""; /* Esto crea el pseudo-elemento */
-    position: absolute; /* Lo coloca fuera del flujo normal del documento */
-    bottom: 0; /* Coloca la línea en la parte inferior del enlace */
-    left: 0; /* Comienza en el extremo izquierdo */
-    height: 2px; /* Altura de la línea */
-    background-color: white; /* Color de la línea */
-    width: 100%; /* Transición suave en el ancho */
+.menu-transicion-activo::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: white;
+    width: 100%;
 }
 
 .iniciar-sesion{
@@ -118,6 +119,9 @@ nav ul li{
     cursor: pointer;
 }
 
+.body-contacto{
+    height: 100vh;
+}
 
 .comenzar button{
     background: linear-gradient(to bottom, #7EF0D4 60%, #E0B0FF 100%);
@@ -131,18 +135,15 @@ nav ul li{
     cursor: pointer;
 }
 
-.animacionButton {
-    transition: transform 0.3s ease; /* Transición suave */
-
+.animacion-scale {
+    transition: transform 0.3s ease;
 }
 
-.animacionButton:hover {
+.animacion-scale:hover {
     transform: scale(1.05);
 }
 
-/* radial-gradient(rgb(106,63,140, 0) 0%, rgb(106,63,140, 0.1) 30%, rgb(36,10,52,0.6) 65%) */
-
-.bodyHome{
+.body-home{
     background-image: url(../img/fondo1.png), url(../img/fondo2.png) ;
     background-position: -360px center, center center;
     background-size: cover;
@@ -162,26 +163,26 @@ nav ul li{
     position: relative;
 }
 
-.menuLogo {
+.menu-logo {
     margin-left: 90px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
 }
 
-.menuLogo img{
+.menu-logo img{
     width: 65px;
     height: 132px;
 }
 
-.menuLogo p{
+.menu-logo p{
     margin-right: 130px;
     text-align: left;
     font-size: 33px;
     color: white;
 }
 
-.menuLogo span{
+.menu-logo span{
     font-size: 33px;
     color: white;
 }
@@ -218,8 +219,6 @@ nav ul li{
     display: flex;
     justify-content: space-between;
     width: 100%;
-
-
 }
 
 .lado-izquierdo{
@@ -293,7 +292,6 @@ nav ul li{
     border: 6px solid #E0B0FF;
     display: flex;
     flex-direction: column;
-    margin-bottom: 84px;
 }
 
 .form-contacto label{
@@ -627,6 +625,7 @@ nav ul li{
     box-sizing: border-box;
 }
 
+
 .menu-lateral{
     color: white;
     width: 23%;
@@ -634,7 +633,46 @@ nav ul li{
     font-size: 25px;
     border-right: 1px solid rgba(224, 176, 255, 0.3);
     box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
 }
+
+.flecha-menu{
+    position: absolute;
+    top: 720px;
+    left: 385px;
+    transform: rotate(180deg);
+}
+
+.flecha-menu img{
+    width: 40px;
+}
+
+.menu-lateral-oculto{
+    color: white;
+    width: 5%;
+    height: 100%;
+    font-size: 25px;
+    border-right: 1px solid rgba(224, 176, 255, 0.3);
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.flecha-menu-oculto{
+    position: absolute;
+    top: 720px;
+    left: 30px;
+}
+
+.flecha-menu-oculto img{
+    width: 40px;
+}
+
+
+
+
+
+
+
 
 .menu-lateral ul{
     padding-top: 30px;
@@ -730,28 +768,28 @@ nav ul li{
 .listado-estanterias{
     width: 100%;
     height: 93%;
-    position: relative;
     padding-top: 30px;
     margin-top: 10px;
     overflow-y: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: 600px 600px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+    row-gap: 40px;
 }
 
-.listado-estanterias::-webkit-scrollbar {
-    width: 12px; /* Ancho de la barra de desplazamiento */
+.scrollbar::-webkit-scrollbar {
+    width: 12px;
 }
 
-
-
-.listado-estanterias::-webkit-scrollbar-thumb {
-    background: linear-gradient(-116deg, #7EF0D4 0%, #E0B0FF 44%, #7EF0D4 100%); /* Color del "thumb" de la barra */
-    border-radius: 50px; /* Bordes redondeados para el thumb */
+.scrollbar::-webkit-scrollbar-thumb {
+    background: linear-gradient(-116deg, #7EF0D4 0%, #E0B0FF 44%, #7EF0D4 100%);
+    border-radius: 50px;
 }
 
-.listado-estanterias::-webkit-scrollbar-track {
-    background-color: transparent; /* Color del fondo de la pista */
+.scrollbar::-webkit-scrollbar-track {
+    background-color: transparent;
 }
 
 .gradiente-listado-estanterias::before{
@@ -763,7 +801,7 @@ nav ul li{
     right: 0;
     bottom: 0;
     background: linear-gradient(to left, #6A3F8C 0%, #150D3F  100%);
-    z-index: -1;
+    z-index: -2;
     pointer-events: none;
 }
 
@@ -772,7 +810,6 @@ nav ul li{
     width: 100%;
     height: 100%;
     padding-right: 20px;
-    padding-left: 93px;
     position: relative;
 }
 
@@ -783,6 +820,8 @@ nav ul li{
     position: relative;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
 }
 
 .elipse-luz-estanteria{

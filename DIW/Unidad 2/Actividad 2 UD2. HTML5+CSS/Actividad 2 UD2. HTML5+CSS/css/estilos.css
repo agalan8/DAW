@@ -33,11 +33,11 @@ header a{
     font-size: 0.3em;
 }
 
-.ulMenu{
+.menu-ul{
     list-style-type: none;
 }
 
-.ulMenu li{
+.menu-ul li{
     display: inline;
     padding-left: 1.5em;
 }
