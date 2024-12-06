@@ -11,12 +11,39 @@
     <div class="contenedor">
         <h1>HUNDIR LA FLOTA</h1>
         <div class="contenedor-juego">
-            <div class="contenedor-información">eeeeeeeeeeeeeeeeeee</div>
-            <div class="contenedor-tablero" id="tablero"></div>
+            <div class="contenedor-informacion">
+                <div class="barco" id="Portaaviones">
+                    <img src="img/portaaviones.png" alt="portaaviones">
+                </div>
+                <div class="barco" id="Submarino1">
+                    <img src="img/submarino.png" alt="submarino">
+                </div>
+                <div class="barco" id="Submarino2">
+                    <img src="img/submarino.png" alt="submarino">
+                </div>
+                <div class="barco" id="Acorazado">
+                    <img src="img/acorazado.png" alt="acorazado">
+                </div>
+                <div class="barco" id="Destructor1">
+                    <img src="img/destructor.png" alt="destructor">
+                </div>
+                <div class="barco" id="Destructor2">
+                    <img src="img/destructor.png" alt="destructor">
+                </div>
+                <div class="barco" id="Destructor3">
+                    <img src="img/destructor.png" alt="destructor">
+                </div>
+            </div>
+            <div class="contenedor-tablero" id="tablero">
+                <img src="img/portada.jpeg" id="portada" alt="portada">
+            </div>
             <div class="contenedor-botones">
-                <button class="iniciar" onclick="colocarBarcos();">INICIAR</button>
+                <button class="iniciar" id="iniciar" onclick="iniciarJuego();">INICIAR</button>
+                <button class="reiniciar" onclick="reiniciar();">REINICIAR</button>
+                <div id="disparos"></div>
             </div>
         </div>
+        <div id="finJuego"></div>
     </div>
     <script src="juego.js"></script>
 </body>

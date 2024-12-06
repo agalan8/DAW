@@ -1,7 +1,24 @@
 
+.body{
+    position: relative;
+}
+
+.finJuego{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#portada{
+    width: 650px;
+    height: 800px;
+}
+
+
 .contenedor{
     display: grid;
-    grid-template-rows: 90px 1fr;
+    grid-template-rows: 75px 1fr;
 }
 
 .contenedor h1{
@@ -20,15 +37,60 @@
     border: 2px solid black;
 }
 
-.contenedor-tablero div{
+.contenedor-informacion{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
 }
 
-.contenedor-informacion{
-    border: 2px solid black;
+.contenedor-informacion div{
+    padding-bottom: 30px;
+}
+
+#Portaaviones img{
+    width: 400px;
+    height: auto;
+}
+
+#Submarino1 img{
+    width: 300px;
+    height: auto;
+}
+
+#Submarino2 img{
+    width: 300px;
+    height: auto;
+}
+
+#Acorazado img{
+    width: 200px;
+    height: auto;
+}
+
+#Destructor1 img{
+    width: 150px;
+    height: auto;
+}
+
+#Destructor2 img{
+    width: 150px;
+    height: auto;
+}
+
+#Destructor3 img{
+    width: 150px;
+    height: auto;
 }
 
 .contenedor-botones{
-    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .iniciar{
@@ -38,6 +100,14 @@
     cursor: pointer;
 }
 
+.reiniciar{
+    width: 100px;
+    height: 50px;
+    background-color: rgb(43, 169, 219);
+    cursor: pointer;
+}
+
+
 .contenedor-tablero div{
     display: flex;
     justify-content: center;
@@ -46,5 +116,6 @@
     height: 80px;
     border: 1px solid black;
     cursor: pointer;
-    font-size: 80px;
+    background-color: transparent;
+    font-size: 3px;
 }
