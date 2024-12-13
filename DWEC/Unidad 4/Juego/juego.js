@@ -282,30 +282,6 @@ function disparar(celda){
         div.style.pointerEvents = "none";
     } else{
 
-        // switch(estado) {
-        //     case portaaviones.nombre:
-        //         portaaviones.decrContador();
-        //         break;
-        //     case submarino1.nombre:
-        //         submarino1.decrContador();
-        //         break;
-        //     case submarino2.nombre:
-        //         submarino2.decrContador();
-        //         break;
-        //     case acorazado.nombre:
-        //         acorazado.decrContador();
-        //         break;
-        //     case destructor1.nombre:
-        //         destructor1.decrContador();
-        //         break;
-        //     case destructor2.nombre:
-        //         destructor2.decrContador();
-        //         break;
-        //     case destructor3.nombre:
-        //         destructor3.decrContador();
-        //         break;
-        // }
-
         // Busco el barco en mi array barcos con el mismo nombre que la casilla
         let barco = barcos.find(b => b.nombre === estado);
         // Compruebo si se ha encontrado el barco en el array
@@ -331,8 +307,6 @@ function disparar(celda){
     }
     // Decremento el número de disparos que le quedan al jugador
     decrDisparos();
-    // Actualizo en pantalla el número de disparos que le quedan al jugador
-    actualizarDisparos();
     // Verifico si el juego ha terminado tras este disparo
     verificarFinJuego();
 }
@@ -340,10 +314,6 @@ function disparar(celda){
 // Función que decrementa el número de disparos
 function decrDisparos(){
     disparos--;
-}
-
-// Función que actualiza el contenido del div que contiene el número de disparos que le quedan al jugador.
-function actualizarDisparos(){
     document.getElementById('disparos').innerHTML = `<h1>DISPAROS: ${disparos}</h1>`;
 }
 
@@ -352,7 +322,7 @@ function verificarFinJuego(){
 
     // Compruebo si en alguna celda queda algun nombre de un barco
     // Recorro cada fila del tablero
-    let barcosHundidos = generarArrayTablero().every(fila =>{
+    let barcosRestantes = generarArrayTablero().every(fila =>{
         // Recorro todas las celdas de la fila
         return fila.every(celda => {
             // Si la celda no cientene el nombre de ningún barco devuelve true
@@ -360,8 +330,8 @@ function verificarFinJuego(){
         });
     })
 
-    // Si barcosHundidos es false, quiere decir que todos los barcos han sido hundidos
-    if(barcosHundidos){
+    // Si barcosRestantes es false, quiere decir que todos los barcos han sido hundidos
+    if(barcosRestantes){
         // Gana la partida
         ganador();
         // Si no gana la partida y te has quedado sin disparos
