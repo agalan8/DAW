@@ -307,8 +307,6 @@ function disparar(celda){
     }
     // Decremento el número de disparos que le quedan al jugador
     decrDisparos();
-    // Actualizo en pantalla el número de disparos que le quedan al jugador
-    actualizarDisparos();
     // Verifico si el juego ha terminado tras este disparo
     verificarFinJuego();
 }
@@ -316,10 +314,6 @@ function disparar(celda){
 // Función que decrementa el número de disparos
 function decrDisparos(){
     disparos--;
-}
-
-// Función que actualiza el contenido del div que contiene el número de disparos que le quedan al jugador.
-function actualizarDisparos(){
     document.getElementById('disparos').innerHTML = `<h1>DISPAROS: ${disparos}</h1>`;
 }
 
@@ -328,7 +322,7 @@ function verificarFinJuego(){
 
     // Compruebo si en alguna celda queda algun nombre de un barco
     // Recorro cada fila del tablero
-    let barcosHundidos = generarArrayTablero().every(fila =>{
+    let barcosRestantes = generarArrayTablero().every(fila =>{
         // Recorro todas las celdas de la fila
         return fila.every(celda => {
             // Si la celda no cientene el nombre de ningún barco devuelve true
@@ -336,8 +330,8 @@ function verificarFinJuego(){
         });
     })
 
-    // Si barcosHundidos es false, quiere decir que todos los barcos han sido hundidos
-    if(barcosHundidos){
+    // Si barcosRestantes es false, quiere decir que todos los barcos han sido hundidos
+    if(barcosRestantes){
         // Gana la partida
         ganador();
         // Si no gana la partida y te has quedado sin disparos
