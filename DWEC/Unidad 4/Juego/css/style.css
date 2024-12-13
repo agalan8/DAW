@@ -65,22 +65,22 @@
 }
 
 #Acorazado img{
-    width: 200px;
+    width: 280px;
     height: auto;
 }
 
 #Destructor1 img{
-    width: 150px;
+    width: 180px;
     height: auto;
 }
 
 #Destructor2 img{
-    width: 150px;
+    width: 180px;
     height: auto;
 }
 
 #Destructor3 img{
-    width: 150px;
+    width: 180px;
     height: auto;
 }
 
@@ -117,5 +117,5 @@
     border: 1px solid black;
     cursor: pointer;
     background-color: transparent;
-    font-size: 3px;
+    font-size: 0px;
 }

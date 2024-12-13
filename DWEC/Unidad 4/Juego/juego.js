@@ -282,30 +282,6 @@ function disparar(celda){
         div.style.pointerEvents = "none";
     } else{
 
-        // switch(estado) {
-        //     case portaaviones.nombre:
-        //         portaaviones.decrContador();
-        //         break;
-        //     case submarino1.nombre:
-        //         submarino1.decrContador();
-        //         break;
-        //     case submarino2.nombre:
-        //         submarino2.decrContador();
-        //         break;
-        //     case acorazado.nombre:
-        //         acorazado.decrContador();
-        //         break;
-        //     case destructor1.nombre:
-        //         destructor1.decrContador();
-        //         break;
-        //     case destructor2.nombre:
-        //         destructor2.decrContador();
-        //         break;
-        //     case destructor3.nombre:
-        //         destructor3.decrContador();
-        //         break;
-        // }
-
         // Busco el barco en mi array barcos con el mismo nombre que la casilla
         let barco = barcos.find(b => b.nombre === estado);
         // Compruebo si se ha encontrado el barco en el array
