@@ -458,9 +458,6 @@ nav ul li{
 .cuerpo-blog {
     height: 100%;
     position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 .cuerpo-blog::before {
@@ -881,7 +878,6 @@ nav ul li{
 .contenedor-video-fichero{
     position: relative;
     justify-self: center;
-
     width: 50%;
     height: 530px;
     margin-bottom: 100px;
@@ -914,7 +910,6 @@ nav ul li{
 }
 
 .imagen-bits{
-
     width: 500px;
     height: auto;
 }
