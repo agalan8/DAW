@@ -1,7 +1,6 @@
 
 const numColumnas = 10;
 const numFilas = 10;
-const numBarcos = 7;
 const orientaciones = ['vertical', 'horizontal'];
 arrayTablero = [];
 
@@ -143,7 +142,6 @@ function colocarBarcos(){
                     document.getElementById(`${posicionX}-${seleccion.posicionY}`).innerHTML = barco.nombre;
                     posicionX--;
                 }
-
             }
         }
     });
@@ -307,6 +305,8 @@ function disparar(celda){
     }
     // Decremento el número de disparos que le quedan al jugador
     decrDisparos();
+    // Actulizo los dispartos que se ven en pantalla
+    actualizarDisparos();
     // Verifico si el juego ha terminado tras este disparo
     verificarFinJuego();
 }
@@ -314,6 +314,9 @@ function disparar(celda){
 // Función que decrementa el número de disparos
 function decrDisparos(){
     disparos--;
+}
+
+function actualizarDisparos(){
     document.getElementById('disparos').innerHTML = `<h1>DISPAROS: ${disparos}</h1>`;
 }
 
