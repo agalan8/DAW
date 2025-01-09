@@ -1,14 +1,3 @@
-// document.addEventListener('mousedown', function(event){
-
-//     if(event.button == 0){
-//         alert("Has pulsado el click izquierdo");
-//     } else if(event.button == 1){
-//         alert("Has pulsado la rueda del ratón");
-//     } else if(event.button == 2){
-//         alert("Has pulsado el click derecho");
-//     }
-// });
-
 function click(event){
     var evento = event;
     switch(evento.button){
