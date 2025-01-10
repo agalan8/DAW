@@ -8,16 +8,16 @@ document.addEventListener('keydown', function(event){
 
     switch(event.key){
         case 'ArrowUp':
-            y -= 50;
+            y -= 100;
             break;
         case 'ArrowDown':
-            y +=50;
+            y +=100;
             break;
         case 'ArrowLeft':
-            x -= 50;
+            x -= 100;
             break;
         case 'ArrowRight':
-            x += 50;
+            x += 100;
             break;
     }
 
