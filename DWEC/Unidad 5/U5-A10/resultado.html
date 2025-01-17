@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="U5-A08.js"></script>
+    <script src="U5-A10.js"></script>
     <title>Resultado</title>
 </head>
 <body>
@@ -14,6 +14,7 @@
     <p id="asignatura">Asignatura:</p>
     <p id="dias">Dias con disponibilidad:</p>
     <p id="dia_preferente">Dia preferente:</p>
+    <p id="profesor">Profesor:</p>
 
     <script>
         var datos = window.location.search;
@@ -25,6 +26,7 @@
         document.getElementById('asignatura').innerHTML += " " + datos.get('asignatura');
         document.getElementById('dias').innerHTML += " " + datos.get('dias');
         document.getElementById('dia_preferente').innerHTML += " " + datos.get('dia_preferente');
+        document.getElementById('profesor').innerHTML += " " + datos.get('profesor');
     </script>
 
 </body>

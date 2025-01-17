@@ -1,4 +1,3 @@
-
 document.getElementById('formulario').addEventListener('submit', function(event){
 
     var nombre = document.getElementById('nombre').value;
@@ -27,6 +26,23 @@ document.getElementById('formulario').addEventListener('submit', function(event)
 
     var dia_preferente = document.getElementById('preferente').value;
 
-    window.open(`resultado.html?nombre=${nombre}&mensaje=${mensaje}&color=${color}&asignatura=${asignatura}&dias=${dias}&dia_preferente=${dia_preferente}`);
+    var profesor;
+
+    switch (asignatura){
+        case 'matematicas':
+            profesor = 'Manolo';
+            break;
+        case 'lengua':
+            profesor = 'Antonio';
+            break;
+        case 'informatica':
+            profesor = 'Jose';
+            break;
+        case 'plastica':
+            profesor = 'Sara';
+            break;
+    }
+
+    window.open(`resultado.html?nombre=${nombre}&mensaje=${mensaje}&color=${color}&asignatura=${asignatura}&dias=${dias}&dia_preferente=${dia_preferente}&profesor=${profesor}`);
 
 })
