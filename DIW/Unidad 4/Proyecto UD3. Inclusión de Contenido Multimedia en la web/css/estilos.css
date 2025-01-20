@@ -1009,6 +1009,97 @@ nav ul li{
     height: 200px;
 }
 
+.estante .contenedor-tabs{
+    min-height: 10vh;
+    position: relative;
+}
+
+.estante .tab{
+    margin: 0.3em;
+    padding: 1em;
+    width: 100%;
+    height: 45vh;
+    position: absolute;
+    opacity: 0;
+    background-color: #7EF0D4;
+    transition: all .5s ease;
+}
+
+.estante .tab.activo{
+    opacity: 1;
+    z-index: 1;
+}
+
+.carrusel{
+    width: 1300px;
+    max-width: 100vw;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+.carrusel .imagenes-carrusel{
+    position: absolute;
+    width: max-content;
+    height: 90%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+.carrusel .imagenes-carrusel img{
+    width: 1300px;
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+.carrusel .botones-carrusel{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.carrusel .botones-carrusel button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+}
+.carrusel .puntos{
+    position: absolute;
+    top: 400px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.carrusel .puntos li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.carrusel .puntos li.activo{
+    width: 30px;
+}
+@media screen and (max-width: 768px){
+    .carrusel{
+        height: 400px;
+    }
+}
+
 
 footer{
     position: absolute;
