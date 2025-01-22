@@ -4,6 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>U5-A17</title>
+
+    <style>
+
+        .formulario {
+            display: flex;
+            gap: 100px;
+        }
+
+        .resultado{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border: 2px solid darkred;
+            padding: 20px;
+            gap: 10px;
+            height: fit-content;
+            width: 300px;
+        }
+
+        .color{
+            border: 1px solid black;
+            margin-top: 10px;
+            width: 80px;
+            height: 80px;
+        }
+
+        form {
+            border: 2px solid darkslateblue;
+            padding: 20px 20px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        body {
+            justify-self: center;
+        }
+
+        #bienvenida{
+            justify-self: center;
+            margin-top: 50px;
+        }
+
+        .boton {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .error{
+            color: red;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -11,31 +70,45 @@
     <br>
     <br>
     <br>
-    <form action="">
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" id="nombre">
-        <br>
-        <br>
-        <label for="color">Color favorito:</label>
-        <select name="color" id="color">
-            <option value="" selected disabled>-- Seleccione un color</option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-        </select>
-        <br>
-        <br>
-        <label for="notificaciones">
-            <input type="checkbox" name="notificaciones" id="notificaciones"> Deseo recibir notificaciones.
-        </label>
-        <br>
-        <br>
-        <button type="submit">Enviar</button>
-    </form>
+    <div class="formulario">
+        <form action="">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre">
+            <div id="error_nombre" class="error"></div>
+            <br>
+            <br>
+            <label for="color">Color favorito:</label>
+            <select name="color" id="color">
+                <option value="null" selected disabled>-- Seleccione un color</option>
+                <option value="red">Rojo</option>
+                <option value="green">Verde</option>
+                <option value="blue">Azul</option>
+                <option value="magenta">Magenta</option>
+                <option value="yellow">Amarillo</option>
+                <option value="cyan">Cian</option>
+                <option value="black">Negro</option>
+            </select>
+            <div id="error_color" class="error"></div>
+            <br>
+            <br>
+            <label for="notificaciones">
+                <input type="checkbox" name="notificaciones" id="notificaciones"> Deseo recibir notificaciones.
+            </label>
+            <br>
+            <br>
+            <button type="submit" class="boton" id="enviar">Enviar</button>
+        </form>
+
+        <div class="resultado">
+            <div>Nombre: <span id="impr_nombre"></span></div>
+            <div>Color favorito:
+                <div id="impr_color" class="color"></div>
+            </div>
+            <div>¿Desea recibir notificaciones?: <span id="impr_notificaciones">NO</span></div>
+        </div>
+    </div>
+
+    <script src="U5-A17.js"></script>
 
 </body>
 </html>
