@@ -4,64 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>U5-A18</title>
+    <style>
+
+        body{
+            justify-self: center;
+        }
+
+        .contenedor-form{
+            margin-top: 80px;
+            padding: 30px;
+            border-color: blueviolet;
+            align-items: center;
+        }
+
+        .contenedor-checkbox{
+            margin-top: 5px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 10px;
+            column-gap: 30px;
+            justify-self: center;
+        }
+
+        .contenedor-genero{
+            display: inline-flex;
+            gap: 10px;
+        }
+
+        .contenedor-datos{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .boton {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 30px;
+            width: 100px;
+        }
+
+        .error{
+            color: red;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    </style>
 </head>
 <body>
 
-    <label for="nombre">Nombre:</label>
-    <input type="text" name="nombre" id="nombre">
-    <br>
-    <br>
-    <label for="contraseña">Contraseña:</label>
-    <input type="password" name="contraseña" id="contraseña">
-    <br>
-    <br>
-    <label for="fecha_nacimiento">Fecha de nacimiento:</label>
-    <input type="text" name="fecha_nacimiento" id="fecha_nacimiento">
-    <br>
-    <br>
-    <fieldset>
-        <legend>Opciones de intereses:</legend>
-        <br>
-        <br>
-        <label>
-            <input type="checkbox" name="intereses" id="intereses">
-        </label>
-        <br>
-        <label>
-            <input type="checkbox" name="intereses" id="intereses">
-        </label>
-        <br>
-        <label>
-            <input type="checkbox" name="intereses" id="intereses">
-        </label>
-        <br>
-        <label>
-            <input type="checkbox" name="intereses" id="intereses">
-        </label>
-        <br>
-        <label>
-            <input type="checkbox" name="intereses" id="intereses">
-        </label>
-        <br>
-        <label>
-            <input type="checkbox" name="intereses" id="intereses">
-        </label>
-    </fieldset>
-    <br>
-    <fieldset>
-        <legend>Género:</legend>
-        <label>
-            <input type="radio" name="" id=""> Masculino
-        </label>
-        <br>
-        <label>
-            <input type="radio" name="" id=""> Femenino
-        </label>
-        <br>
-        <label>
-            <input type="radio" name="" id=""> Otro
-        </label>
-    </fieldset>
+    <form id="formulario">
+
+        <fieldset class="contenedor-form">
+            <legend>Formulario</legend>
+
+            <div class="contenedor-datos">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre">
+                <div id="error_nombre" class="error"></div>
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" name="contraseña" id="contraseña">
+                <div id="error_contraseña" class="error"></div>
+                <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+                <input type="date" name="fecha_nacimiento" id="fecha_nacimiento">
+                <div id="error_fecha_nacimiento" class="error"></div>
+            </div>
+
+            <fieldset>
+                <legend>Opciones de intereses:</legend>
+                <div class="contenedor-checkbox">
+                    <label>
+                        <input type="checkbox" name="intereses" value="deportes"> Deportes
+                    </label>
+                    <label>
+                        <input type="checkbox" name="intereses" value="politica"> Política
+                    </label>
+                    <label>
+                        <input type="checkbox" name="intereses" value="informatica"> Informática
+                    </label>
+                    <label>
+                        <input type="checkbox" name="intereses" value="ciencia"> Ciencia
+                    </label>
+                    <label>
+                        <input type="checkbox" name="intereses" value="moda"> Moda
+                    </label>
+                    <label>
+                        <input type="checkbox" name="intereses" value="arte"> Arte
+                    </label>
+                </div>
+                <div id="error_intereses" class="error"></div>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Género:</legend>
+                <div class="contenedor-genero">
+                    <label>
+                        <input type="radio" name="genero" value="masculino"> Masculino
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="genero" value="femenino"> Femenino
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="genero" value="otro"> Otro
+                    </label>
+                </div>
+            </fieldset>
+        </fieldset>
+        <button type="submit" class="boton" id="enviar">Enviar</button>
+    </form>
+
+    <script src="U5-A18.js"></script>
 
 </body>
 </html>

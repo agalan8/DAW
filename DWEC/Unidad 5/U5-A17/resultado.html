@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+    <style>
+
+        body {
+            justify-self: center;
+        }
+
+        .resultado{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border: 2px solid darkred;
+            padding: 20px;
+            height: fit-content;
+            width: 300px;
+            margin-top: 60px;
+        }
+
+        .color{
+            border: 1px solid black;
+            margin-top: 10px;
+            width: 80px;
+            height: 80px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="resultado">
+        <div>Nombre: <span id="impr_nombre"></span></div>
+        <div>Color favorito:
+            <div id="impr_color" class="color"></div>
+        </div>
+        <div>¿Desea recibir notificaciones?: <span id="impr_notificaciones"></span></div>
+    </div>
+
+    <script>
+        var datos = window.location.search;
+        datos = new URLSearchParams(datos);
+
+        document.getElementById('impr_nombre').innerHTML = datos.get('nombre');
+        document.getElementById('impr_color').style.backgroundColor = datos.get('color');
+
+        if(datos.get('notificacion') == "true"){
+            document.getElementById('impr_notificaciones').innerHTML = "SÍ";
+        } else if(datos.get('notificacion') == "false"){
+            document.getElementById('impr_notificaciones').innerHTML = "NO";
+        }
+
+    </script>
+
+</body>
+</html>

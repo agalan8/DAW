@@ -12,6 +12,7 @@ var nombre = document.getElementById('nombre');
 var color = document.getElementById('color');
 var notificaciones = document.getElementById('notificaciones');
 var boton_enviar = document.getElementById('enviar');
+var notificacion = false;
 
 nombre.addEventListener('keyup', ()=>{
     document.getElementById('impr_nombre').innerHTML = nombre.value;
@@ -25,6 +26,7 @@ notificaciones.addEventListener('change', () => {
 
     if(notificaciones.checked){
         document.getElementById('impr_notificaciones').innerHTML = "SÍ";
+        notificacion = true;
     } else {
         document.getElementById('impr_notificaciones').innerHTML = "NO";
     }
@@ -74,3 +76,8 @@ function validarColor(){
 
     return true;
 }
+
+document.getElementById('formulario').addEventListener('submit', () =>{
+
+    window.open(`resultado.html?nombre=${nombre.value}&color=${color.value}&notificacion=${notificacion}`);
+})

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>U5-A17</title>
-
     <style>
 
         .formulario {
@@ -12,7 +11,7 @@
             gap: 100px;
         }
 
-        .resultado{
+        .previsualizacion{
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -30,7 +29,7 @@
             height: 80px;
         }
 
-        form {
+        fieldset {
             border: 2px solid darkslateblue;
             padding: 20px 20px 20px 20px;
             display: flex;
@@ -62,7 +61,6 @@
             color: red;
         }
     </style>
-
 </head>
 <body>
 
@@ -71,35 +69,38 @@
     <br>
     <br>
     <div class="formulario">
-        <form action="">
-            <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" id="nombre">
-            <div id="error_nombre" class="error"></div>
-            <br>
-            <br>
-            <label for="color">Color favorito:</label>
-            <select name="color" id="color">
-                <option value="null" selected disabled>-- Seleccione un color</option>
-                <option value="red">Rojo</option>
-                <option value="green">Verde</option>
-                <option value="blue">Azul</option>
-                <option value="magenta">Magenta</option>
-                <option value="yellow">Amarillo</option>
-                <option value="cyan">Cian</option>
-                <option value="black">Negro</option>
-            </select>
-            <div id="error_color" class="error"></div>
-            <br>
-            <br>
-            <label for="notificaciones">
-                <input type="checkbox" name="notificaciones" id="notificaciones"> Deseo recibir notificaciones.
-            </label>
-            <br>
-            <br>
-            <button type="submit" class="boton" id="enviar">Enviar</button>
+        <form action="" id="formulario">
+            <fieldset>
+                <legend>Formulario</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre">
+                <div id="error_nombre" class="error"></div>
+                <br>
+                <br>
+                <label for="color">Color favorito:</label>
+                <select name="color" id="color">
+                    <option value="null" selected disabled>-- Seleccione un color</option>
+                    <option value="red">Rojo</option>
+                    <option value="green">Verde</option>
+                    <option value="blue">Azul</option>
+                    <option value="magenta">Magenta</option>
+                    <option value="yellow">Amarillo</option>
+                    <option value="cyan">Cian</option>
+                    <option value="black">Negro</option>
+                </select>
+                <div id="error_color" class="error"></div>
+                <br>
+                <br>
+                <label for="notificaciones">
+                    <input type="checkbox" name="notificaciones" id="notificaciones" value="true"> Deseo recibir notificaciones.
+                </label>
+                <br>
+                <br>
+                <button type="submit" class="boton" id="enviar">Enviar</button>
+            </fieldset>
         </form>
 
-        <div class="resultado">
+        <div class="previsualizacion">
             <div>Nombre: <span id="impr_nombre"></span></div>
             <div>Color favorito:
                 <div id="impr_color" class="color"></div>
