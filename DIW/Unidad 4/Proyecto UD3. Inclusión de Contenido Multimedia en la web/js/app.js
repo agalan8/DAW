@@ -1,8 +1,11 @@
 'use strict'
 
+// albumes.html
+
 const album = document.querySelectorAll('.album');
 const tab = document.querySelectorAll('.tab');
 var activar = true;
+var desactivar = false;
 
 album.forEach((cadaAlbum, i)=>{
     album[i].addEventListener('click',()=>{
@@ -15,12 +18,16 @@ album.forEach((cadaAlbum, i)=>{
 
         album.forEach(( cadaAlbum, i)=>{
             tab[i].classList.remove('tab-activo');
+            album[i].classList.remove('album-activo');
+            document.getElementById('filtro').style.opacity = "0";
 
         })
 
         if(activar){
             var carrusel = tab[i].querySelector('.carrusel .imagenes-carrusel');
             tab[i].classList.add('tab-activo');
+            album[i].classList.add('album-activo');
+            document.getElementById('filtro').style.opacity = "0.5";
             carrusel.classList.add('carrusel-activo');
 
 
@@ -66,6 +73,28 @@ album.forEach((cadaAlbum, i)=>{
                 recargarCarrusel();
             };
 
+        }
+    })
+})
+
+// preguntas-frecuentes.html
+
+var bloque = document.querySelectorAll('.bloque-acordeon');
+var h2 = document.querySelectorAll('.h2-acordeon');
+
+h2.forEach((cadah2, i) => {
+    h2[i].addEventListener('click', () =>{
+
+        desactivar = false;
+
+        if(bloque[i].classList.contains('acordeon-activo')){
+            desactivar = true;
+        }
+
+        if(desactivar){
+            bloque[i].classList.remove('acordeon-activo');
+        } else{
+            bloque[i].classList.add('acordeon-activo');
         }
     })
 })
