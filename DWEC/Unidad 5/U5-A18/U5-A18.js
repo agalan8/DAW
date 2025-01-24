@@ -1,5 +1,4 @@
 
-
 var nombre = document.getElementById('nombre');
 var contraseña = document.getElementById('contraseña');
 var fecha_nacimiento = document.getElementById('fecha_nacimiento');
