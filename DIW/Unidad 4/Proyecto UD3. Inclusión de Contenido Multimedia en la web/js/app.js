@@ -61,8 +61,6 @@ album.forEach((cadaAlbum, i)=>{
 
             }
 
-
-
             puntos.forEach((li, key) => {
                 li.addEventListener('click', ()=>{
                      activo = key;
@@ -80,10 +78,11 @@ album.forEach((cadaAlbum, i)=>{
 // preguntas-frecuentes.html
 
 var bloque = document.querySelectorAll('.bloque-acordeon');
-var h2 = document.querySelectorAll('.h2-acordeon');
+var pregunta = document.querySelectorAll('.pregunta-acordeon');
+var icono = document.querySelectorAll('.linea-vertical');
 
-h2.forEach((cadah2, i) => {
-    h2[i].addEventListener('click', () =>{
+pregunta.forEach((cadapregunta, i) => {
+    pregunta[i].addEventListener('click', () =>{
 
         desactivar = false;
 
@@ -93,8 +92,11 @@ h2.forEach((cadah2, i) => {
 
         if(desactivar){
             bloque[i].classList.remove('acordeon-activo');
+            icono[i].classList.remove('linea-vertical-activo');
+
         } else{
             bloque[i].classList.add('acordeon-activo');
+            icono[i].classList.add('linea-vertical-activo');
         }
     })
 })

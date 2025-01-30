@@ -1130,20 +1130,6 @@ nav ul li{
     border-radius: 10px;
 }
 
-.acordeon .bloque-acordeon{
-
-}
-
-.acordeon .h2-acordeon{
-    background-color: white;
-    margin: 0 0 0;
-    padding: 0.8em;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-    border-bottom: 5px solid #6A3F8C;
-    font-size: 25px;
-    border-radius: 10px 10px 0 0;
-}
-
 .acordeon .contenido-acordeon{
     background-color: white;
     height: 0;
@@ -1151,7 +1137,6 @@ nav ul li{
     transition: all .5s ease;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     border-radius: 0 0 10px 10px;
-
 
 }
 
@@ -1169,6 +1154,51 @@ nav ul li{
     justify-self: center;
     margin-top: 20px;
     margin-bottom: 100px;
+}
+
+.pregunta-acordeon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    margin: 0 0 0;
+    padding: 0.8em;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    border-bottom: 5px solid #6A3F8C;
+    font-size: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.icono-acordeon{
+    width: 26px;
+    height: 26px;
+    position: relative;
+}
+
+.linea-horizontal{
+    width: 100%;
+    height: 4px;
+    background-color: #6A3F8C;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.linea-vertical{
+    width: 4px;
+    height: 100%;
+    background-color: #6A3F8C;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.2s linear;
+}
+
+.linea-vertical-activo{
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 0px;
 }
 
 footer{
