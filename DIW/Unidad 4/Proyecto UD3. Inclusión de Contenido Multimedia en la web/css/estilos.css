@@ -626,7 +626,7 @@ nav ul li{
 
 .pagina-estanterias{
     display: grid;
-    grid-template-rows: 18vh 82vh ;
+    grid-template-rows: 190px 80vh;
     position: relative;
 }
 
@@ -742,8 +742,8 @@ nav ul li{
 
 .flecha-menu{
     position: absolute;
-    top: 720px;
-    left: 385px;
+    top: 91%;
+    left: 87%;
     transform: rotate(180deg);
 }
 
@@ -763,8 +763,8 @@ nav ul li{
 
 .flecha-menu-oculto{
     position: absolute;
-    top: 720px;
-    left: 30px;
+    top: 91%;
+    left: 30%;
 }
 
 .flecha-menu-oculto img{
