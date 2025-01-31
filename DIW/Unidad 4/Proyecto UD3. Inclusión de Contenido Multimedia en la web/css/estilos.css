@@ -264,8 +264,7 @@ nav ul li{
 }
 
 .quienes-somos img{
-    width: 50%;
-    width: 958px;
+    max-width: 958px;
     height: auto;
     object-fit: contain;
     display: block;
