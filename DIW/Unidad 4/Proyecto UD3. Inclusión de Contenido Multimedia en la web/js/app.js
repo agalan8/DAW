@@ -73,6 +73,10 @@ album.forEach((cadaAlbum, i)=>{
 
         }
     })
+
+    album[i].addEventListener('dblclick', () =>{
+        window.location.href = 'album.html';
+    })
 })
 
 // preguntas-frecuentes.html
@@ -99,4 +103,26 @@ pregunta.forEach((cadapregunta, i) => {
             icono[i].classList.add('linea-vertical-activo');
         }
     })
+})
+
+// album.html
+
+var enlaces = document.querySelectorAll('.enlace-lightbox');
+var lightbox = document.querySelector('.lightbox');
+var grande = document.querySelector('.grande-lightbox');
+var cerrar = document.querySelector('.cerrar-lightbox');
+
+enlaces.forEach((cadaEnlace, i) =>{
+    enlaces[i].addEventListener('click', ( e ) =>{
+        e.preventDefault();
+        let ruta = cadaEnlace.querySelector('.imagen-lightbox').src;
+        console.log(ruta);
+
+        lightbox.classList.add('activo');
+        grande.setAttribute('src', ruta);
+    })
+})
+
+cerrar.addEventListener('click', () =>{
+    lightbox.classList.remove('activo');
 })
