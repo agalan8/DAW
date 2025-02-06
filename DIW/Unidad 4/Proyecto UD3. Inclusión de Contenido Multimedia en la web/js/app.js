@@ -32,7 +32,7 @@ album.forEach((cadaAlbum, i)=>{
 
 
             var activo = 0;
-            var imagenes = tab[i].querySelectorAll('.carrusel .imagenes-carrusel .img-carrusel');
+            var imagenes = tab[i].querySelectorAll('.carrusel .imagenes-carrusel img');
             var siguiente = tab[i].querySelector('#siguiente');
             var atras = tab[i].querySelector('#atras');
             var puntos = tab[i].querySelectorAll('.carrusel .puntos li');

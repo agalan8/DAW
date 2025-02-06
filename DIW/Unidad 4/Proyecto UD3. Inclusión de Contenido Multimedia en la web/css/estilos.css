@@ -1008,7 +1008,6 @@ nav ul li{
     width: 200px;
     height: 200px;
     cursor: pointer;
-
 }
 
 .estante .contenedor-tabs{
@@ -1055,12 +1054,14 @@ nav ul li{
     display: flex;
     transition: 1s;
 }
+
 .carrusel .imagenes-carrusel img{
     width: 800px;
     max-width: 100vw;
     height: 100%;
     object-fit: contain;
 }
+
 .carrusel .botones-carrusel{
     position: absolute;
     top: 45%;
@@ -1069,6 +1070,7 @@ nav ul li{
     display: flex;
     justify-content: space-between;
 }
+
 .carrusel .botones-carrusel button{
     width: 50px;
     height: 50px;
@@ -1079,6 +1081,7 @@ nav ul li{
     font-family: monospace;
     font-weight: bold;
 }
+
 .carrusel .puntos{
     position: absolute;
     top: 400px;
@@ -1090,6 +1093,7 @@ nav ul li{
     display: flex;
     justify-content: center;
 }
+
 .carrusel .puntos li{
     list-style: none;
     width: 10px;
