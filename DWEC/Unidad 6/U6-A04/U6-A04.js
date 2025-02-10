@@ -1,4 +1,3 @@
-
 alumnos = [];
 numModulos = 3;
 numNotas = 3;
@@ -38,41 +37,35 @@ function comprobarNumAlumnos(){
 
 function imprimirTabla(){
 
-    // Creo el elemento tabla
     var table = document.createElement('table');
-    // Creo el thead para añadir los títulos de las columnas
-    var thead = table.createTHead();
-    // Inserta una fila en el thead
-    var fila = thead.insertRow();
-    // Inserto la primera celda
+    table.createTHead();
+
+    var fila = table.insertRow();
+
     fila.insertCell().textContent = 'Nombre del alumno';
-    //Inserto una celda por cada módulo
+
     for(i = 1; i <= numModulos; i++){
         fila.insertCell().textContent = 'Nombre del módulo'
-        // Inserto una celda por cada nota de cada módulo
+
         for(j = 1; j <= numNotas; j++){
             fila.insertCell().textContent = `Nota ${j}`;
         }
     }
-    // Creo un tbody en la tabla
-    var tbody = table.createTBody();
-    // Por cada alumno hago lo siguiente
+
+    table.createTBody();
+
     alumnos.forEach(function(alumno){
-        // Creo una fila en la tabla
-        var fila = tbody.insertRow();
-        // Añado una celda con el nombre del alumno
+
+        var fila = table.insertRow();
         fila.insertCell().textContent = alumno.nombreAlumno;
-        // Por cada módulo del alumno
+
         alumno.modulos.forEach(function(modulo){
-            // Añado una celda con el nombre del módulo
             fila.insertCell().textContent = modulo.nombreModulo;
-            // Por cada nota del módulo
+
             modulo.notas.forEach(function (nota){
-                // Añado una celda con la nota
                 fila.insertCell().textContent = nota;
             })
         })
     })
-    // Añado la tabla en el body del documento
     document.body.appendChild(table);
 }
