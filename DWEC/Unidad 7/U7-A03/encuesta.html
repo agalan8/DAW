@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta</title>
+</head>
+<body>
+    <fieldset>
+        <legend>¿Qué equipo crees que va a ganar la liga este año?</legend>
+        <br>
+        <label>
+            Real Madrid:
+            <input type="radio" name="equipo" id="real-madrid" value="real-madrid">
+        </label>
+        <br>
+        <label>
+            Barcelona:
+            <input type="radio" name="equipo" id="barcelona" value="barcelona">
+        </label>
+        <br>
+        <label>
+            Atlético de Madrid:
+            <input type="radio" name="equipo" id="atl-madrid" value="atl-madrid">
+        </label>
+        <br>
+        <label>
+            Sevilla:
+            <input type="radio" name="equipo" id="sevilla" value="sevilla">
+        </label>
+    </fieldset>
+    <br>
+    <div id="resultados"></div>
+<script>
+    // Obtengo los elementos input de tipo radio con nombre equipo
+    var equipos = document.querySelectorAll('input[type="radio"][name="equipo"]');
+    // Por cada elemento input en la coleccion equipos hago lo siguiente
+    equipos.forEach(equipo => {
+        // Creo un evento en el input que se disparará al hacer click en el
+        // este evento llama a la función mostrarResultado
+        equipo.addEventListener('click', mostrarResultado);
+    })
+    // Defino la función mostrarResultado
+    function mostrarResultado(event){
+        // Guardo el valor del input
+        let equipo = event.target.value;
+        // Realizo una solicitud fetch
+        fetch("encuesta_voto.php?equipo=" + equipo)
+            .then(response => {
+                // Verifico si la respuesta fue exitosa
+                if(response.ok){
+                    // Devuelvo una promesa con el cuerpo de la respuesta
+                    return response.text();
+                } else{
+                    // En caso contrario muestro un error
+                    throw new Error('Error al obtener los resultados.');
+                }
+            })
+            .then(data => {
+                // Muestro los resultados de la encuesta
+                document.getElementById('resultados').innerHTML = data;
+            })
+            .catch(error => {
+                // En caso de que se produzca algún error lo muestro por consola
+                console.error('Hubo un problema con la petición fetch:', error);
+            })
+    }
+</script>
+</body>
+</html>

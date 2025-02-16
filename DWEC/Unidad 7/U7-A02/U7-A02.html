@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugerencias de Ciudades</title>
+</head>
+<body>
+<h2>Introduce el nombre de una ciudad</h2>
+<input type="text" id="ciudad">
+<div id="sugerencias"></div>
+<script>
+    // Creo un evento en el input que se disparará cada vez que se deje de pulsar una tecla en él
+    // este evento llamará a la función mostrarSugerencias
+    document.getElementById('ciudad').addEventListener('keyup', mostrarSugerencias);
+    // Funcíon que envía una pietición http al servidor que responde con las sugerencias
+    function mostrarSugerencias() {
+        // Obtengo el valor del input
+        let ciudad = document.getElementById("ciudad").value;
+        // Si el la longitud de la cadena es 0
+        if (ciudad.length == 0) {
+            // Imprimo una cadena vacía y salgo de la función
+            document.getElementById("sugerencias").innerHTML = "";
+            return;
+        }
+        // Realizo la solicitud con fetch
+        fetch("U7-A02.php?cadena=" + ciudad)
+            .then(response => {
+                // Verifico si la respuesta fue exitosa
+                if (response.ok) {
+                    // Si la respuesta es exitosa devuelvo una promesa con el cuerpo de la respuesta
+                    return response.text();
+                } else {
+                    // En caso contrario muestro un error
+                    throw new Error('Error al obtener las sugerencias');
+                }
+            })
+            .then(data => {
+                // Muestro las sugerencias obtenidas de la respuesta
+                document.getElementById("sugerencias").innerHTML = data;
+            })
+            .catch(error => {
+                // En caso de que se produzca algún error lo muestro por consola
+                console.error('Hubo un problema con la petición fetch:', error);
+            });
+    }
+</script>
+</body>
+</html>
