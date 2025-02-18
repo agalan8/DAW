@@ -14,9 +14,9 @@
         <header class="menu">
             <div class="menu-logo">
                 <a href="index-sesion.html">
-                    <img src="img/logo.png" alt="logo">
+                    <img src="img/logo.png" alt="logo-pagina-web">
                 </a>
-                <p class="montserrat-regular">ESTANTERÍA <br><span class="montserrat-extraLight">VIRTUAL</span></p>
+                <h1 class="montserrat-regular">ESTANTERÍA <br><span class="montserrat-extraLight">VIRTUAL</span></h1>
             </div>
             <nav>
                 <ul class="menu-ul raleway-bold">
@@ -35,7 +35,7 @@
         </header>
         <div class="cuerpo">
             <div class="contenedor-texto-contacto">
-                <h1 class="montserrat-bold">Somos todo oídos</h1>
+                <h2 class="montserrat-bold">Somos todo oídos</h2>
                 <p class="raleway-bold">Rellena el formulario para comenzar una conversación - Te contestaremos en seguida</p>
             </div>
             <div class="contenedor-contacto">
@@ -49,14 +49,15 @@
                 <div class="lado-derecho raleway-bold">
                     <div class="elipse-luz-form"></div>
                     <form action="#" method="POST" class="form-contacto">
-                        <label for="name">Email:</label>
-                        <input class="raleway-regular" type="text" id="email" name="email" required>
+                        <!-- Cambio, he añadido asterisco para los campos requeridos y el atributo aria-required -->
+                        <label for="email">Email*:</label>
+                        <input class="raleway-regular" type="text" id="email" name="email" required aria-required="true">
 
-                        <label for="nombre">Nombre:</label>
-                        <input class="raleway-regular" type="nombre" id="nombre" name="nombre" required>
+                        <label for="nombre">Nombre*:</label>
+                        <input class="raleway-regular" type="text" id="nombre" name="nombre" required aria-required="true">
 
-                        <label for="mensaje">Mensaje:</label>
-                        <textarea class="raleway-regular" name="mensaje" id="mensaje"></textarea>
+                        <label for="mensaje">Mensaje*:</label>
+                        <textarea class="raleway-regular" name="mensaje" id="mensaje" required aria-required="true"></textarea>
 
                         <div class="button-contenedor">
                             <button type="submit" class="button-enviar raleway-bold animacion-scale">Enviar</button>

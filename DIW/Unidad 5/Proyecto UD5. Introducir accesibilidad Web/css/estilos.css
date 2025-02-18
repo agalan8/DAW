@@ -67,7 +67,7 @@ nav ul li{
     height: 132px;
 }
 
-.menu-logo p{
+.menu-logo h1{
     margin-right: 130px;
     text-align: left;
     font-size: 33px;
@@ -145,9 +145,12 @@ nav ul li{
     font-size: 25px;
     border: none;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.comenzar button{
+.comenzar{
     background: linear-gradient(to bottom, #7EF0D4 60%, #E0B0FF 100%);
     width: 225px;
     height: 75px;
@@ -157,6 +160,9 @@ nav ul li{
     color: #6A3F8C;
     border: none;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contenedor-perfil{
@@ -211,7 +217,6 @@ nav ul li{
 
 .contenedor-quienes-somos p{
     font-size: 29px;
-    text-align: justify;
 }
 
 .gradiente-quienes-somos::before{
@@ -462,7 +467,7 @@ nav ul li{
     margin-bottom: 60px;
 }
 
-.contenedor-texto-contacto h1{
+.contenedor-texto-contacto h2{
     font-size: 60px;
     color: #E0B0FF;
 }
