@@ -18,12 +18,12 @@
                 </a>
                 <h1 class="montserrat-regular">ESTANTERÍA <br><span class="montserrat-extraLight">VIRTUAL</span></h1>
             </div>
-            <nav>
+            <nav aria-labelledby="menuprincipal">
                 <ul class="menu-ul raleway-bold">
                     <li><a class="menu-transicion" href="blog-sesion.html">BLOG</a></li>
                     <li><a class="menu-transicion" href="quienes-somos-sesion.html">QUIÉNES SOMOS</a></li>
                     <li><a class="menu-transicion" href="contacto-sesion.html">CONTACTO</a></li>
-                    <li><a class="menu-transicion-activo" href="mis-estanterias.html">MIS ESTANTERÍAS</a></li>
+                    <li><a class="menu-transicion-activo" href="mis-estanterias.html" aria-current="page">MIS ESTANTERÍAS</a></li>
                 </ul>
                 <div class="contenedor-perfil">
                     <p class="raleway-bold">Mi perfil</p>
@@ -35,18 +35,20 @@
         </header>
 
         <div class="contenedor-mis-estanterias">
-            <div class="menu-lateral">
-                <ul class="raleway-regular">
-                    <li class="opcion-activa opcion-estanteria">Mis estanterías</li>
-                    <li class="opcion opcion-albumes">Álbumes</li>
-                    <li class="opcion opcion-compartido">Compartido conmigo</li>
-                    <li class="opcion opcion-favoritos">Favoritos</li>
-                    <li class="opcion opcion-reciente">Reciente</li>
-                </ul>
-                <a href="mis-estanterias-sin-menu.html" class="flecha-menu">
-                    <img src="img/flecha-menu.png" alt="flecha-menu">
-                </a>
-            </div>
+            <aside>
+                <nav class="menu-lateral" aria-labelledby="menulateral">
+                    <ul class="raleway-regular">
+                        <li class="opcion-activa opcion-estanteria" aria-current="page">Mis estanterías</li>
+                        <li class="opcion opcion-albumes">Álbumes</li>
+                        <li class="opcion opcion-compartido">Compartido conmigo</li>
+                        <li class="opcion opcion-favoritos">Favoritos</li>
+                        <li class="opcion opcion-reciente">Reciente</li>
+                    </ul>
+                    <a href="mis-estanterias-sin-menu.html" class="flecha-menu">
+                        <img src="img/flecha-menu.png" alt="flecha-menu">
+                    </a>
+                </nav>
+            </aside>
             <div class="estanterias gradiente-listado-estanterias">
                 <div class="listado-estanterias scrollbar">
                     <div class="estanteria animacion-scale">

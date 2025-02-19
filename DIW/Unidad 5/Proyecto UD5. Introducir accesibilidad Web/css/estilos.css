@@ -606,6 +606,7 @@ nav ul li{
     filter: blur(250px);
     transform: translate(-50%,-50%);
     pointer-events: none;
+    opacity: 0.2;
 }
 
 .pagina-estanterias{
@@ -631,11 +632,21 @@ nav ul li{
     border-right: 1px solid rgba(224, 176, 255, 0.3);
     box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
     position: relative;
+    display: flex;
+    width: fit-content;
+    height: 100px;
+    overflow-y: hidden;
+    height: 100%;
 }
 
 .menu-lateral ul{
-    padding-top: 30px;
+    padding-top: 50px;
     padding-right: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    justify-content: flex-start;
+    height: 100%;
 }
 
 .opcion{
