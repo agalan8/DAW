@@ -7,15 +7,15 @@ function Footer() {
     <footer className="footer">
       <div className="social-links">
         <Button
-          text="Facebook"
+          texto="Facebook"
           onClick={() => window.open('https://www.facebook.com', '_blank')}
         />
         <Button
-          text="Twitter"
+          texto="Twitter"
           onClick={() => window.open('https://www.twitter.com', '_blank')}
         />
         <Button
-          text="Instagram"
+          texto="Instagram"
           onClick={() => window.open('https://www.instagram.com', '_blank')}
         />
       </div>

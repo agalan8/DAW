@@ -5,51 +5,49 @@ import Cart from "./components/Cart";
 import OtherPage from "./pages/OtherPage";
 
 function App() {
-  // Constante que representa al carrito inicializado como array vacío
-  const [cart, setCart] = useState([]);
-  // Array vacío donde estarán los productos
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [isCartVisible, setIsCartVisible] = useState(false);
+  const [carrito, setCarrito] = useState([]);
+  const [productos, setProductos] = useState([]);
+  const [cargando, setCargando] = useState(true);
+  const [esCarritoVisible, setEsCarritoVisible] = useState(false);
 
-  const apiUrl = "https://fakestoreapi.com/products";
+  const urlApi = "https://fakestoreapi.com/products";
 
   useEffect(() => {
-    fetch(apiUrl)
+    fetch(urlApi)
       .then((response) => response.json())
       .then((data) => {
-        setProducts(data);
-        setLoading(false);
+        setProductos(data);
+        setCargando(false);
       })
       .catch((error) => {
         console.error("Error al obtener los productos:", error);
-        setLoading(false);
+        setCargando(false);
       });
   }, []);
 
-  const addToCart = (product) => {
-    setCart((prevCart) => {
-      const itemExists = prevCart.find((item) => item.id === product.id);
-      if (itemExists) {
-        return prevCart.map((item) =>
-          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+  const agregarAlCarrito = (producto) => {
+    setCarrito((carritoPrevio) => {
+      const itemExiste = carritoPrevio.find((item) => item.id === producto.id);
+      if (itemExiste) {
+        return carritoPrevio.map((item) =>
+          item.id === producto.id ? { ...item, cantidad: item.cantidad + 1 } : item
         );
       }
-      return [...prevCart, { ...product, quantity: 1 }];
+      return [...carritoPrevio, { ...producto, cantidad: 1 }];
     });
   };
 
-  const removeFromCart = (id) => {
-    setCart((prevCart) => prevCart.filter((item) => item.id !== id));
+  const eliminarDelCarrito = (id) => {
+    setCarrito((carritoPrevio) => carritoPrevio.filter((item) => item.id !== id));
   };
 
-  const getTotal = () => {
-    const total = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  const obtenerTotal = () => {
+    const total = carrito.reduce((total, item) => total + item.price * item.cantidad, 0);
     return total.toFixed(2);
   };
 
-  const toggleCartVisibility = () => {
-    setIsCartVisible((prev) => !prev);
+  const alternarVisibilidadCarrito = () => {
+    setEsCarritoVisible((prev) => !prev);
   };
 
   return (
@@ -60,18 +58,18 @@ function App() {
             path="/"
             element={
               <HomePage
-                products={products}
-                addToCart={addToCart}
-                loading={loading}
-                toggleCartVisibility={toggleCartVisibility}
+                productos={productos}
+                agregarAlCarrito={agregarAlCarrito}
+                cargando={cargando}
+                alternarVisibilidadCarrito={alternarVisibilidadCarrito}
               />
             }
           />
           <Route path="/other" element={<OtherPage />} />
         </Routes>
 
-        {isCartVisible && (
-          <Cart cart={cart} removeFromCart={removeFromCart} total={getTotal()} toggleCartVisibility={toggleCartVisibility} />
+        {esCarritoVisible && (
+          <Cart carrito={carrito} eliminarDelCarrito={eliminarDelCarrito} total={obtenerTotal()} alternarVisibilidadCarrito={alternarVisibilidadCarrito} />
         )}
       </div>
     </Router>

@@ -4,27 +4,27 @@ import Button from '../components/Button';
 import Footer from '../components/Footer';
 import '../css/HomePage.css';
 
-function HomePage({ products, addToCart, loading, toggleCartVisibility }) {
+function HomePage({ productos, agregarAlCarrito, cargando, alternarVisibilidadCarrito }) {
   return (
     <div className="home-page">
-      <Header toggleCartVisibility={toggleCartVisibility} />
+      <Header alternarVisibilidadCarrito={alternarVisibilidadCarrito} />
 
-      {loading ? (
+      {cargando ? (
         <p className="loading-text">Cargando productos...</p>
       ) : (
         <>
           <h2 className="products-header">Productos</h2>
           <div className="product-grid">
-            {products.map((product) => (
-              <div key={product.id} className="product-card">
-                <img src={product.image} alt={product.title} className="product-image" />
-                <p className="product-title">{product.title}</p>
-                <p className="product-price">{product.price}€</p>
+            {productos.map((producto) => (
+              <div key={producto.id} className="product-card">
+                <img src={producto.image} alt={producto.title} className="product-image" />
+                <p className="product-title">{producto.title}</p>
+                <p className="product-price">{producto.price}€</p>
 
                 <Button
-                  text="Agregar al carrito"
-                  onClick={() => addToCart(product)}
-                  styleClass="add-to-cart-btn"
+                  texto="Agregar al carrito"
+                  onClick={() => agregarAlCarrito(producto)}
+                  claseEstilo="add-to-cart-btn"
                 />
               </div>
             ))}

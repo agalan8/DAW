@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/Button.css';
 
-function Button({ text, onClick, to, styleClass }) {
+function Button({ texto, onClick, to, claseEstilo }) {
   return to ? (
     <Link to={to}>
-      <button className={styleClass}>{text}</button>
+      <button className={claseEstilo}>{texto}</button>
     </Link>
   ) : (
-    <button className={styleClass} onClick={onClick}>
-      {text}
+    <button className={claseEstilo} onClick={onClick}>
+      {texto}
     </button>
   );
 }

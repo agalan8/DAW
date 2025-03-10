@@ -2,21 +2,21 @@ import React from "react";
 import Button from "./Button";
 import '../css/Header.css';
 
-function Header({ toggleCartVisibility }) {
+function Header({ alternarVisibilidadCarrito }) {
   return (
     <header className="header">
       <h1 className="header-title">Tienda</h1>
 
       <Button
-        text="Ver Carrito"
-        onClick={toggleCartVisibility}
-        styleClass="cart-button"
+        texto="Ver Carrito"
+        onClick={alternarVisibilidadCarrito}
+        claseEstilo="cart-button"
       />
 
       <Button
-        text="Ir a Otra Página"
+        texto="Ir a Otra Página"
         to="/other"
-        styleClass="other-page-button"
+        claseEstilo="other-page-button"
       />
     </header>
   );
